@@ -2,7 +2,7 @@
 .title {
 
   @include text700($size: 24px, $color: var(--text));
-  margin-bottom: 16px;
+  gap: 16px;
 
   &::before {
     content: '/ ';

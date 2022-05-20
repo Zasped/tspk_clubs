@@ -24,9 +24,7 @@
     align-items: center;
     text-transform: uppercase;
     @include text700($color: var(--text), $size: 16px);
-    img{
-      margin-right: 10px;
-    }
+    gap: 10px;
   }
 
   &__nav {
