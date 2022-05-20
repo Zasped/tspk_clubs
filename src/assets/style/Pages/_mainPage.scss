@@ -67,28 +67,27 @@
       }
 
       .subtitle__block {
-        padding: 30px 16px;
+        padding: 10% 0 0 3%;
         position: relative;
+        display: flex;
 
         &::before, &::after {
           content: '';
           display: block;
           background-color: var(--mega-red);
           position: absolute;
+          right: 40px;
+          bottom: 0;
         }
 
         &::before {
           width: 1px;
           height: 17px;
-          right: 0;
-          bottom: 0;
         }
 
         &::after {
           width: 33px;
           height: 1px;
-          right: 0;
-          bottom: 0;
         }
 
         .subtitle__text {
@@ -96,6 +95,16 @@
 
           &::after {
             content: ' __';
+          }
+        }
+
+        .subtitle__arrows {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .arrow:last-child {
+            transform: rotate(180deg);
           }
         }
       }

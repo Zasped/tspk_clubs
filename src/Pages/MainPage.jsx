@@ -6,6 +6,7 @@ import romb from "../assets/images/romb.svg";
 import ClubsBySpecialty from "../assets/images/ClubsBySpecialty.png";
 import ListNavigate from "../components/UI/ListNavigate/ListNavigate";
 import '../assets/style/Pages/_mainPage.scss';
+import arrow from '../assets/images/arrow.svg';
 
 const MainPage = () => {
     return (
@@ -43,8 +44,9 @@ const MainPage = () => {
                         <span className={'subtitle__text'}>
                             Место встречи людей с едиными интересами для определённого вида деятельности в рамках той или иной профессии (Специальности). Хобби.
                         </span>
-                        <div className="subtitle_arrows">
-                            
+                        <div className="subtitle__arrows">
+                            <img src={arrow} alt="arrow" className={'arrow'}/>
+                            <img src={arrow} alt="arrow" className={'arrow'}/>
                         </div>
                     </div>
                 </div>
