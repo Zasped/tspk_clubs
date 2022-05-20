@@ -29,6 +29,7 @@
 
 .mainPage_flex {
   flex-wrap: wrap;
+  border-right: 2px solid var(--border);
 
   .mainPage_column {
     &:first-child {
@@ -40,56 +41,85 @@
       gap: 100px;
     }
 
-    .ClubsBySpecialty {
-      max-width: 256px;
-      height: fit-content;
-      overflow: hidden;
-      border: 4px solid var(--mega-red);
-      background-color: var(--mega-red);
-      filter: drop-shadow(4px 4px 16px rgba(0, 0, 0, 0.75));
+    &:last-child {
+      flex-direction: row;
+    }
 
-      img {
-        object-position: -190px;
-        max-height: 504px;
+    .left_col {
+      .ClubsBySpecialty {
+        max-width: 256px;
+        height: fit-content;
+        overflow: hidden;
+        border: 4px solid var(--mega-red);
+        background-color: var(--mega-red);
+        filter: drop-shadow(4px 4px 16px rgba(0, 0, 0, 0.75));
+
+        img {
+          object-position: -190px;
+          max-height: 504px;
+        }
+
+        &__title {
+          text-align: center;
+          @include text700($size: 24px, $color: var(--text-white));
+          padding: 1em 0;
+        }
       }
 
-      &__title {
-        text-align: center;
-        @include text700($size: 24px, $color: var(--text-white));
-        padding: 1em 0;
+      .subtitle__block {
+        padding: 30px 16px;
+        position: relative;
+
+        &::before, &::after {
+          content: '';
+          display: block;
+          background-color: var(--mega-red);
+          position: absolute;
+        }
+
+        &::before {
+          width: 1px;
+          height: 17px;
+          right: 0;
+          bottom: 0;
+        }
+
+        &::after {
+          width: 33px;
+          height: 1px;
+          right: 0;
+          bottom: 0;
+        }
+
+        .subtitle__text {
+          @include text400($size: 18px, $color: #595D6C);
+
+          &::after {
+            content: ' __';
+          }
+        }
       }
     }
 
-    .subtitle__block {
-      padding: 30px 16px;
-      position: relative;
+    .right_col {
+      transform: translateX(10px);
+      writing-mode: vertical-lr;
+      text-align: center;
 
-      &::before, &::after{
-        content: '';
-        display: block;
-        background-color: var(--mega-red);
-        position: absolute;
-      }
+      span {
+        background: white;
+        padding: 10px 0;
+        display: inline-block;
+        color: var(--text-gray);
 
-      &::before{
-        width: 1px;
-        height: 17px;
-        right: 0;
-        bottom: 0;
-      }
-
-      &::after{
-        width: 33px;
-        height: 1px;
-        right: 0;
-        bottom: 0;
-      }
-
-      .subtitle__text {
-        @include text400($size: 18px, $color: #595D6C);
+        &::before, &::after {
+          content: '';
+          display: block;
+        }
 
         &::after {
-          content: ' __';
+          height: 100%;
+
         }
       }
     }
