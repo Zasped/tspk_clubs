@@ -21,3 +21,9 @@
   flex: 1 1 auto;
   padding: 0 8%;
 }
+
+@media (max-width: 1025px) {
+  .container{
+    padding: 0 5%;
+  }
+}

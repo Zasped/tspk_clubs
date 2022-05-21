@@ -1,35 +1,9 @@
 @import "src/assets/style/mixins";
 
-.fast__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 60%;
-  align-self: stretch;
-  gap: 16px;
-
-  &__title {
-    @include text700($size: 22px, $color: var(--text));
-  }
-
-  .images {
-    display: flex;
-    gap: 16px;
-
-    &__item {
-      background: var(--mega-red);
-      padding: 16px;
-      filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.75));
-      object-fit: fill;
-      width: 64px;
-      height: 64px;
-    }
-  }
-}
 
 .mainPage_flex {
   flex-wrap: wrap;
-  border-right: 2px solid var(--border);
+  border-right: 1px solid var(--border);
 
   .mainPage_column {
     &:first-child {
@@ -45,7 +19,42 @@
       flex-direction: row;
     }
 
+    .page__title {
+      max-width: 400px;
+    }
+
+    .fast__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 60%;
+      align-self: stretch;
+      gap: 16px;
+
+      &__title {
+        @include text700($size: 22px, $color: var(--text));
+      }
+
+      .images {
+        display: flex;
+        gap: 16px;
+
+        &__item {
+          background: var(--mega-red);
+          padding: 16px;
+          filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.75));
+          object-fit: fill;
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+
     .left_col {
+      .flex {
+        justify-content: space-between;
+      }
+
       .ClubsBySpecialty {
         max-width: 256px;
         height: fit-content;
@@ -70,6 +79,7 @@
         padding: 10% 0 0 3%;
         position: relative;
         display: flex;
+        gap: 16px;
 
         &::before, &::after {
           content: '';
@@ -93,8 +103,11 @@
         .subtitle__text {
           @include text400($size: 18px, $color: #595D6C);
 
-          &::after {
-            content: ' __';
+
+          span {
+            &::after {
+              content: ' __';
+            }
           }
         }
 
@@ -129,6 +142,82 @@
         &::after {
           height: 100%;
 
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1025px) {
+  .mainPage_flex .mainPage_column .fast__nav {
+    align-self: center;
+  }
+}
+
+@media (max-width: 891px) {
+  .mainPage_flex {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 581px) {
+  .navList {
+    display: none;
+  }
+  .mainPage_flex {
+    border: none;
+
+    .mainPage_column {
+      .left_col {
+        border-right: 1px solid var(--border);
+        padding: 0 10px;
+
+        .flex {
+          justify-content: center;
+        }
+      }
+
+      .right_col {
+        transform: translateX(-10px);
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+
+  .header__nav {
+    &__item {
+      &::after{
+        display: none;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .mainPage_flex .mainPage_column .left_col .subtitle__block {
+    flex-direction: column;
+    gap: 42px;
+
+    &::after, &::before {
+      display: none;
+    }
+
+    .subtitle__arrows {
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+
+      .arrow {
+        &:first-child {
+          transform: rotate(-90deg);
+        }
+
+        &:last-child {
+          transform: rotate(90deg);
         }
       }
     }

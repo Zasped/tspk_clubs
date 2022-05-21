@@ -12,10 +12,12 @@ const MainPage = () => {
     return (
         <div className="flex mainPage_flex">
             <div className="column mainPage_column">
-                <Card
-                    title={'SCREENSAVER'}
-                    desc={'Основной задачи проекта является структуризация клубов и их работ, а так же для более удобного учёт для преподователей.'}
-                />
+                <div className="page__title">
+                    <Card
+                        title={'SCREENSAVER'}
+                        desc={'Основной задачи проекта является структуризация клубов и их работ, а так же для более удобного учёт для преподователей.'}
+                    />
+                </div>
                 <div className={"fast__nav"}>
                     <h1 className={'fast__nav__title'}>Быстрая навигация</h1>
                     <div className={"images"}>
@@ -27,23 +29,25 @@ const MainPage = () => {
             </div>
             <div className="column mainPage_column">
                 <div className="left_col">
-                    <div className="flex" style={{justifyContent: "space-between"}}>
+                    <div className="flex">
                         <div className="ClubsBySpecialty">
                             <img src={ClubsBySpecialty} alt=""/>
                             <p className="ClubsBySpecialty__title">Клубы по специальностям</p>
                         </div>
-                        <ListNavigate
-                            elements={[
-                                {body: 'Клубы-по-специальностям'},
-                                {body: 'Практическое-применение'},
-                                {body: 'Расписание-API'},
-                            ]}
-                        />
+                        <div className="navList">
+                            <ListNavigate
+                                elements={[
+                                    {body: 'Клубы-по-специальностям'},
+                                    {body: 'Практическое-применение'},
+                                    {body: 'Расписание-API'},
+                                ]}
+                            />
+                        </div>
                     </div>
                     <div className={'subtitle__block'}>
-                        <span className={'subtitle__text'}>
-                            Место встречи людей с едиными интересами для определённого вида деятельности в рамках той или иной профессии (Специальности). Хобби.
-                        </span>
+                        <p className={'subtitle__text'}>
+                            Место встречи людей с едиными интересами для определённого вида деятельности в рамках той или иной профессии (Специальности). <span>Хобби.</span>
+                        </p>
                         <div className="subtitle__arrows">
                             <img src={arrow} alt="arrow" className={'arrow'}/>
                             <img src={arrow} alt="arrow" className={'arrow'}/>

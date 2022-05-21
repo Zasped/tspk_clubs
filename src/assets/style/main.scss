@@ -10,7 +10,7 @@
 }
 
 body{
-  overflow: hidden;
+  //overflow: hidden;
   height: 100vh;
 }
 
@@ -24,6 +24,7 @@ body{
 @import "color";
 
 @import "../../layout/MainLayout/mainLayout";
+@import "../../layout/ModalLayout/modalLayout";
 
 @import "Footer/footer";
 @import "Header/header";
