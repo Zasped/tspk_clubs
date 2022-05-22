@@ -1,0 +1,85 @@
+@import "../../assets/style/mixins";
+
+.head {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.flex {
+  .column {
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      padding: 48px 43px;
+      height: 70vh;
+    }
+
+    .quote {
+      padding: 3% 15%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .img {
+        box-shadow: var(--shadow);
+        background-color: var(--background);
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .quote__text {
+        p {
+          margin-bottom: 16px;
+        }
+
+        small {
+          display: block;
+          width: 100%;
+          text-align: end;
+          @include text400($size: 14px, $color: var(--text-gray));
+        }
+      }
+    }
+
+    .block_submit {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .btns {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap-reverse;
+
+        .btn {
+          @include text400($size: 18px, $color: var(--text));
+          padding: 12px 32px;
+          border: none;
+          cursor: pointer;
+
+          &:first-child {
+            border: 1px solid var(--border);
+            background-color: white;
+          }
+
+          &:last-child {
+            background-color: var(--mega-red);
+            color: var(--text-white);
+            box-shadow: var(--shadow);
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        @include text400($color: var(--text-light-gray));
+      }
+    }
+  }
+}

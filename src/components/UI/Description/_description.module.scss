@@ -1,6 +1,0 @@
-@import "src/assets/style/mixins";
-
-.title {
-  padding-left: 1em;
-  @include text400($size: 16px, $color: var(--text-gray));
-}

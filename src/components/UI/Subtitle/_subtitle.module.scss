@@ -1,0 +1,12 @@
+@import "../../../assets/style/mixins";
+
+.subtitle {
+  padding-left: 1em;
+  @include text400($size: 16px, $color: var(--text-gray));
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}

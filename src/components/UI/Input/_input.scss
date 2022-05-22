@@ -1,0 +1,17 @@
+@import "src/assets/style/mixins";
+
+.input{
+  width: 100%;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 14.5px 8px;
+  @include text400($color: var(--text-light-gray));
+  transition: .1s ease-in-out;
+  outline: none;
+
+  &:focus{
+    box-shadow: var(--shadow);
+    @include text400($color: var(--text-gray));
+  }
+}

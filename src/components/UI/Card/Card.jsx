@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './_card.module.scss'
 import Title from "../Title/Title";
-import Description from "../Description/Description";
+import Subtitle from "../Subtitle/Subtitle";
 
-const Card = ({title, desc}) => {
+const Card = ({title, children, style, fontSizeTitle, fontColorTitle, fontColorDesc}) => {
     return (
-        <div className={styles.card}>
-            <Title title={title}/>
-            <Description>
-                {desc}
-            </Description>
+        <div className={styles.card} style={style}>
+            <Title title={title} fontSize={fontSizeTitle} fontColor={fontColorTitle}/>
+            <Subtitle fontColor={fontColorDesc}>
+                {children}
+            </Subtitle>
         </div>
     );
 };

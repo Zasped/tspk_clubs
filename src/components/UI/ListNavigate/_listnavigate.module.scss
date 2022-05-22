@@ -1,4 +1,4 @@
-@import "src/assets/style/mixins";
+@import "../../../assets/style/mixins";
 
 .list {
   display: flex;
@@ -6,7 +6,7 @@
   align-items: flex-end;
   gap: 32px;
   text-align: right;
-  padding: 16px 0;
+  padding: 16px 10px;
 
   &_item {
     @include text400($size: 16px, $color: var(--text-gray));

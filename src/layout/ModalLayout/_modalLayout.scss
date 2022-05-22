@@ -9,21 +9,18 @@
   align-items: center;
   background-color: var(--background);
   backdrop-filter: blur(16px);
+  z-index: 5;
 
   &__content {
-    max-width: 50%;
+    max-width: 60%;
+    width: 100%;
     border: 1px solid #CDCDCD;
     display: flex;
     flex-direction: column;
     padding: 32px;
-    gap: 16px;
+    background-color: var(--background);
   }
 }
 
-.head{
-  gap: 16px;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-}
+
 

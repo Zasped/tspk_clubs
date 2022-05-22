@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="29QxWwNRuWAFXsP2GtARDBpst7s" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -16,7 +23,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Pages" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\Pages" />
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\components\Authentication" />
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\Pages\Pages" />
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\Pages" />
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\components\Header" />
+      <recent name="C:\Proj\gitClone\tspk_clubs\src\components" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -28,7 +51,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653059147614</updated>
-      <workItem from="1653059162030" duration="3465000" />
+      <workItem from="1653059162030" duration="4065000" />
+      <workItem from="1653210392321" duration="23930000" />
     </task>
     <servers />
   </component>
@@ -36,6 +60,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1653226296671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1653226296671" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1653059544661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
