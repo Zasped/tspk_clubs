@@ -43,9 +43,10 @@
           background: var(--mega-red);
           padding: 16px;
           box-shadow: var(--shadow);
+          width: 32px;
+          height: 32px;
           object-fit: fill;
-          width: 64px;
-          height: 64px;
+          box-sizing: content-box;
         }
       }
     }

@@ -17,12 +17,34 @@
 
     .page__title {
       min-width: 100%;
+      box-shadow: var(--shadow);
     }
 
     .description_club {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+
+      .social{
+        background-color: var(--mega-red);
+        box-shadow: var(--shadow);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: 200px;
+        width: 100%;
+        img{
+          width: 32px;
+          height: 32px;
+          padding: 16px;
+          box-sizing: content-box;
+          object-fit: fill;
+        }
+        span{
+          @include text400($color: var(--text-white));
+        }
+      }
+
     }
 
     .left_col {
@@ -60,9 +82,7 @@
         align-items: center;
       }
 
-      img.clubImg {
-        box-shadow: var(--shadow);
-      }
+      img.clubImg {}
 
       .subtitle__block {
         padding: 10% 0 0 3%;

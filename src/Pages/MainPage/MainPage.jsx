@@ -1,12 +1,17 @@
 import React from 'react';
 import './_mainPage.scss';
 import Card from "../../components/UI/Card/Card";
-import cubs from "../../assets/images/cubs.svg";
-import calendar from "../../assets/images/calendar.svg";
 import romb from "../../assets/images/romb.svg";
 import ClubsBySpecialty from "../../assets/images/ClubsBySpecialty.png";
 import ListNavigate from "../../components/UI/ListNavigate/ListNavigate";
-import arrow from '../../assets/images/arrow.svg';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faArrowDown,
+    faArrowUp,
+    faCalendarDays,
+    faCubesStacked,
+    fas
+} from "@fortawesome/free-solid-svg-icons";
 
 const MainPage = () => {
     return (
@@ -23,9 +28,9 @@ const MainPage = () => {
                 <div className={"fast__nav"}>
                     <h1 className={'fast__nav__title'}>Быстрая навигация</h1>
                     <div className={"images"}>
-                        <img src={cubs} alt="cubs" className={"images__item"}/>
-                        <img src={calendar} alt="calendar" className={"images__item"}/>
-                        <img src={romb} alt="romb" className={"images__item"}/>
+                        <FontAwesomeIcon icon={faCubesStacked} size={"1x"} className={'images__item'} color={'#fff'}/>
+                        <FontAwesomeIcon icon={faCalendarDays} size={'1x'} className={'images__item'} color={'#fff'}/>
+                        <img src={romb} alt="" className={'images__item'}/>
                     </div>
                 </div>
             </div>
@@ -49,11 +54,12 @@ const MainPage = () => {
                     </div>
                     <div className={'subtitle__block'}>
                         <p className={'subtitle__text'}>
-                            Место встречи людей с едиными интересами для определённого вида деятельности в рамках той или иной профессии (Специальности). <span>Хобби.</span>
+                            Место встречи людей с едиными интересами для определённого вида деятельности в рамках той
+                            или иной профессии (Специальности). <span>Хобби.</span>
                         </p>
                         <div className="subtitle__arrows">
-                            <img src={arrow} alt="arrow" className={'arrow'}/>
-                            <img src={arrow} alt="arrow" className={'arrow'}/>
+                            <FontAwesomeIcon icon={faArrowUp} size={'2x'} color={'#5E5A60'}/>
+                            <FontAwesomeIcon icon={faArrowDown} size={'2x'} color={'#5E5A60'}/>
                         </div>
                     </div>
                 </div>

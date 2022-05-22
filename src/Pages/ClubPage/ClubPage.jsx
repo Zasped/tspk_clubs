@@ -3,8 +3,9 @@ import './_clubPage.scss';
 import Card from "../../components/UI/Card/Card";
 import clubImg from "../../assets/images/clubImg.jpg";
 import ListNavigate from "../../components/UI/ListNavigate/ListNavigate";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {teleg} from '@fortawesome/free-solid-svg-icons';
+import vk from '../../assets/images/vk.svg';
+import discord from '../../assets/images/discord.svg';
+import telegram from '../../assets/images/telegram.svg';
 
 const ClubPage = () => {
     return (
@@ -34,10 +35,18 @@ const ClubPage = () => {
                         title={'Ссылки'}
                         fontSizeTitle={'18px'}
                     >
-                        <div className={'social'}>
-                            <FontAwesomeIcon icon={} />
-                            Discord
-                        </div>
+                        <a href={'#'} className={'social'}>
+                            <img src={discord} alt=""/>
+                            <span>Discord</span>
+                        </a>
+                        <a href={'#'} className={'social'}>
+                            <img src={vk} alt=""/>
+                            <span>VK</span>
+                        </a>
+                        <a href={'#'} className={'social'}>
+                            <img src={telegram} alt=""/>
+                            <span>Telegram</span>
+                        </a>
                     </Card>
                     <Card
                         title={'Расписание занятий'}
