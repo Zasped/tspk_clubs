@@ -10,7 +10,6 @@ import {
     faArrowUp,
     faCalendarDays,
     faCubesStacked,
-    fas
 } from "@fortawesome/free-solid-svg-icons";
 
 const MainPage = () => {
