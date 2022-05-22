@@ -15,6 +15,8 @@ const App = () => {
                 <ClubPage/>
                 {/*<MainPage/>*/}
             </MainLayout>
+            {/*<Auth/>*/}
+            {/*<Register/>*/}
             <Footer/>
         </>
     );

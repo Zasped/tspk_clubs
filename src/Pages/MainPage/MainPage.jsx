@@ -58,8 +58,8 @@ const MainPage = () => {
                             или иной профессии (Специальности). <span>Хобби.</span>
                         </p>
                         <div className="subtitle__arrows">
-                            <FontAwesomeIcon icon={faArrowUp} size={'2x'} color={'#5E5A60'}/>
-                            <FontAwesomeIcon icon={faArrowDown} size={'2x'} color={'#5E5A60'}/>
+                            <FontAwesomeIcon icon={faArrowUp} size={'2x'} color={'#5E5A60'} className={'arrow'}/>
+                            <FontAwesomeIcon icon={faArrowDown} size={'2x'} color={'#5E5A60'} className={'arrow'}/>
                         </div>
                     </div>
                 </div>

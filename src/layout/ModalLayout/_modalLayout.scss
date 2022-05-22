@@ -22,5 +22,24 @@
   }
 }
 
+@media (max-width: 1441px) {
+  .modal__content{
+    max-width: 70%;
+  }
+}
 
+@media (max-width: 1135px) {
+  .modal__content{
+    max-width: 90%;
+    display: flex;
+    gap: 20px;
+  }
+}
 
+@media (max-width: 476px) {
+  .modal__content {
+    padding: 16px;
+    height: 97vh;
+    max-width: 95%;
+  }
+}

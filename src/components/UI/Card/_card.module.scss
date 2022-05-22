@@ -5,3 +5,9 @@
   padding: 16px;
   flex: 1 1 50%;
 }
+
+@media (max-width: 769px) {
+  .card{
+    flex: 1 1 100%;
+  }
+}

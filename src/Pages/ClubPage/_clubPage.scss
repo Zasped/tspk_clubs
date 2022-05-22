@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 
   .clubPage_column {
-    padding: 16px;
+    padding: 14px;
 
     &:first-child {
       display: flex;
@@ -25,7 +25,7 @@
       flex-direction: row;
       flex-wrap: wrap;
 
-      .social{
+      .social {
         background-color: var(--mega-red);
         box-shadow: var(--shadow);
         display: flex;
@@ -33,14 +33,16 @@
         gap: 8px;
         max-width: 200px;
         width: 100%;
-        img{
+
+        img {
           width: 32px;
           height: 32px;
           padding: 16px;
           box-sizing: content-box;
           object-fit: fill;
         }
-        span{
+
+        span {
           @include text400($color: var(--text-white));
         }
       }
@@ -68,7 +70,7 @@
       &::before {
         content: 'Клуб 1';
         position: absolute;
-        top: 50%;
+        top: 45%;
         right: -20px;
         writing-mode: vertical-lr;
         background-color: var(--background);
@@ -82,7 +84,8 @@
         align-items: center;
       }
 
-      img.clubImg {}
+      img.clubImg {
+      }
 
       .subtitle__block {
         padding: 10% 0 0 3%;
@@ -119,16 +122,6 @@
             }
           }
         }
-
-        .subtitle__arrows {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-
-          .arrow:last-child {
-            transform: rotate(180deg);
-          }
-        }
       }
     }
 
@@ -159,28 +152,33 @@
 }
 
 @media (max-width: 1025px) {
-  .mainPage_flex .mainPage_column .fast__nav {
+  .clubPage_flex .clubPage_column .fast__nav {
     align-self: center;
     max-width: none;
   }
 }
 
 @media (max-width: 891px) {
-  .mainPage_flex {
+  .clubPage_flex {
     gap: 20px;
   }
 }
 
-@media (max-width: 581px) {
-  .navList {
+@media (max-width: 769px) {
+  .clubPage_flex .clubPage_column .left_col {
     display: none;
   }
-  .mainPage_flex {
-    //border: none;
+  .clubPage_flex .clubPage_column{
+    padding: 0;
+  }
+}
 
-    .mainPage_column {
+@media (max-width: 581px) {
+
+  .clubPage_flex {
+
+    .clubPage_column {
       .left_col {
-        //border-right: 1px solid var(--border);
         padding: 0 10px;
 
         .flex {
@@ -209,28 +207,12 @@
     }
   }
 
-  .mainPage_flex .mainPage_column .left_col .subtitle__block {
+  .clubPage_flex .clubPage_column .left_col .subtitle__block {
     flex-direction: column;
     gap: 42px;
 
     &::after, &::before {
       display: none;
-    }
-
-    .subtitle__arrows {
-      flex-direction: row;
-      justify-content: center;
-      gap: 16px;
-
-      .arrow {
-        &:first-child {
-          transform: rotate(-90deg);
-        }
-
-        &:last-child {
-          transform: rotate(90deg);
-        }
-      }
     }
   }
 

@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 
   .mainPage_column {
-    padding: 16px;
+    padding: 14px;
 
     &:first-child {
       display: flex;
@@ -53,7 +53,8 @@
 
     .left_col {
       position: relative;
-      &::after{
+
+      &::after {
         content: '';
         display: block;
         height: 100%;
@@ -63,7 +64,8 @@
         position: absolute;
         background-color: var(--border);
       }
-      &::before{
+
+      &::before {
         content: 'ОПИСАНИЕ - ПРОЕКТА';
         position: absolute;
         top: 40%;
@@ -140,10 +142,6 @@
           display: flex;
           flex-direction: column;
           gap: 16px;
-
-          .arrow:last-child {
-            transform: rotate(180deg);
-          }
         }
       }
     }
@@ -169,11 +167,9 @@
     display: none;
   }
   .mainPage_flex {
-    //border: none;
 
     .mainPage_column {
       .left_col {
-        //border-right: 1px solid var(--border);
         padding: 0 10px;
 
         .flex {
@@ -192,9 +188,10 @@
 
   .header__nav {
     &__item {
-      &::after{
+      &::after {
         display: none;
       }
+
       &:last-child {
         display: none;
       }
@@ -220,7 +217,7 @@
         }
 
         &:last-child {
-          transform: rotate(90deg);
+          transform: rotate(-90deg);
         }
       }
     }

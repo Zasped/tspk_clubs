@@ -44,3 +44,18 @@
     }
   }
 }
+
+@media (max-width: 426px) {
+
+  .header__nav {
+    &__item {
+      &::after {
+        display: none;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

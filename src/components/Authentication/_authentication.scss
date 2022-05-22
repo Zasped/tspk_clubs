@@ -13,8 +13,8 @@
       flex-direction: column;
       justify-content: center;
       gap: 16px;
-      padding: 48px 43px;
-      height: 70vh;
+      padding: 0 10%;
+      min-height: 70vh;
     }
 
     .quote {
@@ -82,4 +82,27 @@
       }
     }
   }
+}
+
+@media (max-width: 791px) {
+  .modal__content .flex {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .flex .column .quote {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .flex .column .form{
+    padding: 0 5%;
+    min-height: 50vh;
+    overflow: hidden;
+  }
+
+  .modal__content .flex{
+    overflow: auto;
+  }
+
 }
