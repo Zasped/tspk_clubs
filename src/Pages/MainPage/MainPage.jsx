@@ -38,7 +38,9 @@ const MainPage = () => {
                 <div className="left_col">
                     <div className="flex">
                         <div className="ClubsBySpecialty">
-                            <img src={ClubsBySpecialty} alt=""/>
+                            <div className="clubImg">
+                                <img src={ClubsBySpecialty} alt=""/>
+                            </div>
                             <p className="ClubsBySpecialty__title">Клубы по специальностям</p>
                         </div>
                         <div className="navList">

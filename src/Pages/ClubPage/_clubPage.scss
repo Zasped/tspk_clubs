@@ -3,6 +3,30 @@
 
 .clubPage_flex {
   flex-wrap: wrap;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 3px;
+    top: 0;
+    right: -10px;
+    position: absolute;
+    background-color: var(--border);
+  }
+
+  &::before {
+    content: 'Клуб 1';
+    position: absolute;
+    top: 45%;
+    right: -20px;
+    writing-mode: vertical-lr;
+    background-color: var(--background);
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
 
   .clubPage_column {
     padding: 14px;
@@ -13,6 +37,22 @@
       justify-content: center;
       align-items: flex-start;
       gap: 100px;
+    }
+
+    .club__list {
+      width: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+
+      &__text {
+        box-shadow: var(--shadow);
+        padding: 14px 30px;
+        text-align: center;
+        background-color: var(--mega-red);
+        color: var(--text-white);
+      }
     }
 
     .page__title {
@@ -56,39 +96,27 @@
       flex-direction: column;
       justify-content: center;
 
-      &::after {
-        content: '';
-        display: block;
-        height: 100%;
-        width: 3px;
-        top: 0;
-        right: -10px;
-        position: absolute;
-        background-color: var(--border);
-      }
-
-      &::before {
-        content: 'Клуб 1';
-        position: absolute;
-        top: 45%;
-        right: -20px;
-        writing-mode: vertical-lr;
-        background-color: var(--background);
-        z-index: 1;
-        box-sizing: border-box;
-        padding: 10px 0;
-      }
-
       .flex {
         justify-content: space-between;
         align-items: center;
       }
 
-      img.clubImg {
+      .clubImg {
+        width: 90%;
+        flex: 0 1 70%;
+        border: 3px solid var(--mega-red);
+
+        img {
+          display: block;
+          width: 100%;
+          object-fit: cover;
+          max-height: 512px;
+          object-position: top;
+        }
       }
 
       .subtitle__block {
-        padding: 10% 0 0 3%;
+        padding: 9% 0 0 3%;
         position: relative;
         display: flex;
         gap: 16px;
@@ -161,15 +189,25 @@
 @media (max-width: 891px) {
   .clubPage_flex {
     gap: 20px;
+
   }
 }
 
 @media (max-width: 769px) {
-  .clubPage_flex .clubPage_column .left_col {
-    display: none;
-  }
-  .clubPage_flex .clubPage_column{
+  .clubPage_flex .clubPage_column {
     padding: 0;
+
+    &:first-child {
+      gap: 40px;
+    }
+
+    .club__list {
+      display: flex;
+    }
+
+    .left_col {
+      display: none;
+    }
   }
 }
 

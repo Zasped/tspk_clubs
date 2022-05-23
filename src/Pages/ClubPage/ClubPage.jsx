@@ -1,7 +1,7 @@
 import React from 'react';
 import './_clubPage.scss';
 import Card from "../../components/UI/Card/Card";
-import clubImg from "../../assets/images/clubImg.jpg";
+import clubImg from "../../assets/images/clubImg.png";
 import ListNavigate from "../../components/UI/ListNavigate/ListNavigate";
 import vk from '../../assets/images/vk.svg';
 import discord from '../../assets/images/discord.svg';
@@ -11,6 +11,11 @@ const ClubPage = () => {
     return (
         <div className="flex clubPage_flex">
             <div className="column clubPage_column">
+                <div className="club__list">
+                    <div className="club__list__text">
+                        Список клубов
+                    </div>
+                </div>
                 <div className="page__title">
                     <Card
                         title={'Описание'}
@@ -62,19 +67,21 @@ const ClubPage = () => {
             <div className="column clubPage_column">
                 <div className="left_col">
                     <div className="flex">
-                        <img src={clubImg} alt="clubImg" className={'clubImg'}/>
+                        <div className="clubImg">
+                            <img src={clubImg} alt="clubImg"/>
+                        </div>
                         <div className="navList">
                             <ListNavigate
                                 elements={[
                                     {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 1'},
+                                    {body: 'Клуб 2'},
+                                    {body: 'Клуб 3'},
+                                    {body: 'Клуб 4'},
+                                    {body: 'Клуб 5'},
+                                    {body: 'Клуб 6'},
+                                    {body: 'Клуб 7'},
+                                    {body: 'Клуб 8'},
+                                    {body: 'Клуб 9'},
                                 ]}
                             />
                         </div>

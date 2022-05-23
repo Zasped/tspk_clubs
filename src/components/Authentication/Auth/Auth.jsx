@@ -12,7 +12,9 @@ const Auth = () => {
         <ModalLayout>
             <div className="head">
                 <Title title={'Авторизация'}/>
-                <div className="close"><FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'}/></div>
+                <div className="close">
+                    <FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'}/>
+                </div>
             </div>
             <div className="flex">
                 <div className="column">
@@ -36,7 +38,7 @@ const Auth = () => {
                             <button className={'btn'}>Регистрация</button>
                             <button className={'btn'}>Авторизация</button>
                         </div>
-                        <p>Забыл пароль?   (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</p>
+                        <p>Забыл пароль? (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</p>
                     </div>
                 </div>
             </div>

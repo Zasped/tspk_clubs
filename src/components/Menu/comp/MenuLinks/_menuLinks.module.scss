@@ -1,0 +1,26 @@
+@import "src/assets/style/mixins";
+
+.block__item {
+  padding: 15px 40px;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 146px;
+  width: 100%;
+  .block__item__image {
+    background: var(--mega-red);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    width: 36px;
+    height: 36px;
+    object-fit: fill;
+    box-sizing: content-box;
+  }
+  .block__item__text{
+    @include text400($size: 20px, $color: var(--text-gray));
+    text-align: center;
+  }
+}

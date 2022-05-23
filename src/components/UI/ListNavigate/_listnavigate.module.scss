@@ -11,7 +11,7 @@
   &_item {
     @include text400($size: 16px, $color: var(--text-gray));
     cursor: pointer;
-
+    white-space: nowrap;
     &.active {
       @include text700($size: 18px, $color: var(--text));
 

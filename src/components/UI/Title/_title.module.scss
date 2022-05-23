@@ -3,6 +3,7 @@
 
   @include text700($size: 24px, $color: var(--text));
   gap: 16px;
+  white-space: nowrap;
 
   &::before {
     content: '/ ';

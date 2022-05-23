@@ -84,15 +84,19 @@
       .ClubsBySpecialty {
         max-width: 256px;
         width: 100%;
-        height: fit-content;
+        height: max-content;
         overflow: hidden;
         border: 4px solid var(--mega-red);
         background-color: var(--mega-red);
         box-shadow: var(--shadow);
 
-        img {
-          object-position: -190px;
-          max-height: 504px;
+        .clubImg{
+          min-height: 504px;
+          flex: 0 1 70%;
+          img {
+            object-position: -190px;
+            max-height: 504px;
+          }
         }
 
         &__title {
@@ -103,7 +107,7 @@
       }
 
       .subtitle__block {
-        padding: 10% 0 0 3%;
+        padding: 9% 0 0 3%;
         position: relative;
         display: flex;
         gap: 16px;

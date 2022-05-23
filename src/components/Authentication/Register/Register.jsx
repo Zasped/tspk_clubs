@@ -12,7 +12,9 @@ const Register = () => {
         <ModalLayout>
             <div className="head">
                 <Title title={'Регистрация'}/>
-                <div className="close"><FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'} /></div>
+                <div className="close">
+                    <FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'}/>
+                </div>
             </div>
             <div className="flex">
                 <div className="column">
@@ -42,7 +44,7 @@ const Register = () => {
                             <button className={'btn'}>Авторизация</button>
                             <button className={'btn'}>Регистрация</button>
                         </div>
-                        <p>Проблемы с регистрацией?  ( ͡ಠ ʖ̯ ͡ಠ)</p>
+                        <p>Проблемы с регистрацией? ( ͡ಠ ʖ̯ ͡ಠ)</p>
                     </div>
                 </div>
             </div>
