@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import MainLayout from "./layout/MainLayout/MainLayout";
 import MainPage from "./Pages/MainPage/MainPage";
 import Register from "./components/Authentication/Register/Register";
 import Auth from "./components/Authentication/Auth/Auth";
@@ -17,10 +16,12 @@ import TimeTablePage from "./Pages/TimeTablePage/TimeTablePage";
 const App = () => {
 
     const [menuVisible, setMenuVisible] = useState(false);
+    const [authVisible, setAuthVisible] = useState(false);
+    const [registerVisible, setRegisterVisible] = useState(true);
 
     return (
         <>
-            <Header setMenuVisible={setMenuVisible}/>
+            <Header setMenuVisible={setMenuVisible} setAuthVisible={setAuthVisible}/>
             <Routes>
                 <Route path={'/'}>
                     <Route path={'home'} element={<MainPage/>}/>
@@ -30,8 +31,8 @@ const App = () => {
                 <Route path={'*'} element={<Navigate to="/home" replace/>}/>
             </Routes>
             <Menu visible={menuVisible} setMenuVisible={setMenuVisible}/>
-            {/*<Auth/>*/}
-            {/*<Register/>*/}
+            <Auth authVisible={authVisible} setAuthVisible={setAuthVisible} />
+            <Register registerVisible={registerVisible} setRegisterVisible={setRegisterVisible}/>
             <Footer/>
         </>
     );

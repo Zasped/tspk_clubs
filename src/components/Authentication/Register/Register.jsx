@@ -7,48 +7,50 @@ import imgQuote from '../../../assets/images/quoteReg.jpg';
 import '../_authentication.scss';
 import ModalLayout from "../../../layout/ModalLayout/ModalLayout";
 
-const Register = () => {
+const Register = ({registerVisible, setRegisterVisible}) => {
     return (
-        <ModalLayout>
-            <div className="head">
-                <Title title={'Регистрация'}/>
-                <div className="close">
-                    <FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'}/>
-                </div>
-            </div>
-            <div className="flex">
-                <div className="column">
-                    <form className={'form'}>
-                        <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                        <Input type={'text'}/>
-                        <Input type={'text'}/>
-                        <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                        <Input type={'text'}/>
-                        <Input type={'text'}/>
-                        <Input type={'text'}/>
-                        <Input type={'text'}/>
-                    </form>
-                </div>
-                <div className="column">
-                    <div className="quote">
-                        <div className="img">
-                            <img src={imgQuote} alt=""/>
-                        </div>
-                        <div className="quote__text">
-                            <p>“Туда ехать полчаса, буду через десять минут.”</p>
-                            <small>Криминальное чтиво (Pulp Fiction)</small>
-                        </div>
-                    </div>
-                    <div className="block_submit">
-                        <div className="btns">
-                            <button className={'btn'}>Авторизация</button>
-                            <button className={'btn'}>Регистрация</button>
-                        </div>
-                        <p>Проблемы с регистрацией? ( ͡ಠ ʖ̯ ͡ಠ)</p>
+        <div style={(registerVisible ? {display: "block"} : {display: "none"})}>
+            <ModalLayout>
+                <div className="head">
+                    <Title title={'Регистрация'}/>
+                    <div className="close" onClick={e => setRegisterVisible(false)}>
+                        <FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'}/>
                     </div>
                 </div>
-            </div>
-        </ModalLayout>
+                <div className="flex">
+                    <div className="column">
+                        <form className={'form'}>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                        </form>
+                    </div>
+                    <div className="column">
+                        <div className="quote">
+                            <div className="img">
+                                <img src={imgQuote} alt=""/>
+                            </div>
+                            <div className="quote__text">
+                                <p>“Туда ехать полчаса, буду через десять минут.”</p>
+                                <small>Криминальное чтиво (Pulp Fiction)</small>
+                            </div>
+                        </div>
+                        <div className="block_submit">
+                            <div className="btns">
+                                <button className={'btn'}>Авторизация</button>
+                                <button className={'btn'}>Регистрация</button>
+                            </div>
+                            <p>Проблемы с регистрацией? ( ͡ಠ ʖ̯ ͡ಠ)</p>
+                        </div>
+                    </div>
+                </div>
+            </ModalLayout>
+        </div>
     );
 };
 

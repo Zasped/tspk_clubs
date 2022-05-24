@@ -1,28 +1,47 @@
 @import "../../assets/style/mixins";
 
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-wrap: wrap;
-  &__column{
-    &.left{
+
+  &__column {
+
+    &.left {
       display: flex;
       flex-direction: column;
-      flex: 1 1 30%;
+      flex: 1 1 20%;
       gap: 16px;
-      .title{
+
+      .title {
         padding: 16px;
       }
-      .subtitle{
+
+      .subtitle {
         padding: 16px 16px 16px 0;
       }
-      .cldr{
+
+      .cldr {
         display: flex;
         justify-content: center;
       }
+
     }
-    &.right{
-      flex: 1 1 70%;
+
+    &.right {
+      flex: 1 1 80%;
+      max-height: 85vh;
+      overflow: auto;
+
+      .groupTimeTable {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
     }
+
   }
+
 }
