@@ -6,7 +6,7 @@ const ListNavigate = ({elements}) => {
         <ul className={styles.list}>
             {elements.map((el, index) =>
                 <li
-                    key={el.body}
+                    key={index}
                     className={(index === 0) ? [styles.list_item, styles.active].join(' ') : styles.list_item}
                 >
                     {el.body}

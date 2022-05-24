@@ -37,7 +37,7 @@ const Menu = ({visible, setMenuVisible}) => {
                         <Link to={'home'} onClick={closeModal}>
                             <MenuLinks icon={faCubesStacked} text={'Ярмарка мастеров'}/>
                         </Link>
-                        <Link to={'home'} onClick={closeModal}>
+                        <Link to={'timetable'} onClick={closeModal}>
                             <MenuLinks icon={faCalendarDays} text={'Расписание'}/>
                         </Link>
                         <Link to={'home'} onClick={closeModal}>

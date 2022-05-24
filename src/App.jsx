@@ -12,6 +12,7 @@ import {
     Route,
     Navigate
 } from "react-router-dom";
+import TimeTablePage from "./Pages/TimeTablePage/TimeTablePage";
 
 const App = () => {
 
@@ -19,16 +20,15 @@ const App = () => {
 
     return (
         <>
-            <Header setMenuVisible={setMenuVisible} />
-            <MainLayout>
-                <Routes>
-                    <Route path={'/'}>
-                        <Route path={'home'} element={<MainPage/>}/>
-                        <Route path={'clubs'} element={<ClubPage/>}/>
-                    </Route>
-                    <Route path={'*'} element={<Navigate to="/home" replace />} />
-                </Routes>
-            </MainLayout>
+            <Header setMenuVisible={setMenuVisible}/>
+            <Routes>
+                <Route path={'/'}>
+                    <Route path={'home'} element={<MainPage/>}/>
+                    <Route path={'clubs'} element={<ClubPage/>}/>
+                    <Route path={'timetable'} element={<TimeTablePage/>}/>
+                </Route>
+                <Route path={'*'} element={<Navigate to="/home" replace/>}/>
+            </Routes>
             <Menu visible={menuVisible} setMenuVisible={setMenuVisible}/>
             {/*<Auth/>*/}
             {/*<Register/>*/}

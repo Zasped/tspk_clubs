@@ -6,89 +6,94 @@ import ListNavigate from "../../components/UI/ListNavigate/ListNavigate";
 import vk from '../../assets/images/vk.svg';
 import discord from '../../assets/images/discord.svg';
 import telegram from '../../assets/images/telegram.svg';
+import MainLayout from "../../layout/MainLayout/MainLayout";
 
 const ClubPage = () => {
     return (
-        <div className="flex clubPage_flex">
-            <div className="column clubPage_column">
-                <div className="club__list">
-                    <div className="club__list__text">
-                        Список клубов
-                    </div>
-                </div>
-                <div className="page__title">
-                    <Card
-                        title={'Описание'}
-                        children={'Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.'}
-                        style={{background: 'var(--mega-red)'}}
-                        fontColorDesc={'var(--text-white)'}
-                        fontColorTitle={'var(--text-white)'}
-                    />
-                </div>
-                <div className={"description_club"}>
-                    <Card
-                        title={'Ведущий клуба'}
-                        fontSizeTitle={'18px'}
-                        children={'Asurame Socrum'}
-                    />
-                    <Card
-                        title={'Куратор'}
-                        fontSizeTitle={'18px'}
-                        children={'Asurame Socrum'}
-                    />
-                    <Card
-                        title={'Ссылки'}
-                        fontSizeTitle={'18px'}
-                    >
-                        <a href={'#'} className={'social'}>
-                            <img src={discord} alt=""/>
-                            <span>Discord</span>
-                        </a>
-                        <a href={'#'} className={'social'}>
-                            <img src={vk} alt=""/>
-                            <span>VK</span>
-                        </a>
-                        <a href={'#'} className={'social'}>
-                            <img src={telegram} alt=""/>
-                            <span>Telegram</span>
-                        </a>
-                    </Card>
-                    <Card
-                        title={'Расписание занятий'}
-                        fontSizeTitle={'18px'}
-                    >
-                        <p>Занятия проходят в еженедельной форме в определённой аудитории, оффициальный график предоставлен ниже.</p>
-                        <p>График не зависит от оффициального графика, место его проведения и время встреч может быть изменено руководящим отделением.</p>
-
-                    </Card>
-                </div>
-            </div>
-
-            <div className="column clubPage_column">
-                <div className="left_col">
-                    <div className="flex">
-                        <div className="clubImg">
-                            <img src={clubImg} alt="clubImg"/>
-                        </div>
-                        <div className="navList">
-                            <ListNavigate
-                                elements={[
-                                    {body: 'Клуб 1'},
-                                    {body: 'Клуб 2'},
-                                    {body: 'Клуб 3'},
-                                    {body: 'Клуб 4'},
-                                    {body: 'Клуб 5'},
-                                    {body: 'Клуб 6'},
-                                    {body: 'Клуб 7'},
-                                    {body: 'Клуб 8'},
-                                    {body: 'Клуб 9'},
-                                ]}
-                            />
+        <MainLayout>
+            <div className="flex clubPage_flex">
+                <div className="column clubPage_column">
+                    <div className="club__list">
+                        <div className="club__list__text">
+                            Список клубов
                         </div>
                     </div>
+                    <div className="page__title">
+                        <Card
+                            title={'Описание'}
+                            children={'Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.'}
+                            style={{background: 'var(--mega-red)'}}
+                            fontColorDesc={'var(--text-white)'}
+                            fontColorTitle={'var(--text-white)'}
+                        />
+                    </div>
+                    <div className={"description_club"}>
+                        <Card
+                            title={'Ведущий клуба'}
+                            fontSizeTitle={'18px'}
+                            children={'Asurame Socrum'}
+                        />
+                        <Card
+                            title={'Куратор'}
+                            fontSizeTitle={'18px'}
+                            children={'Asurame Socrum'}
+                        />
+                        <Card
+                            title={'Ссылки'}
+                            fontSizeTitle={'18px'}
+                        >
+                            <a href={'#'} className={'social'}>
+                                <img src={discord} alt=""/>
+                                <span>Discord</span>
+                            </a>
+                            <a href={'#'} className={'social'}>
+                                <img src={vk} alt=""/>
+                                <span>VK</span>
+                            </a>
+                            <a href={'#'} className={'social'}>
+                                <img src={telegram} alt=""/>
+                                <span>Telegram</span>
+                            </a>
+                        </Card>
+                        <Card
+                            title={'Расписание занятий'}
+                            fontSizeTitle={'18px'}
+                        >
+                            <p>Занятия проходят в еженедельной форме в определённой аудитории, оффициальный график
+                                предоставлен ниже.</p>
+                            <p>График не зависит от оффициального графика, место его проведения и время встреч может
+                                быть изменено руководящим отделением.</p>
+
+                        </Card>
+                    </div>
+                </div>
+
+                <div className="column clubPage_column">
+                    <div className="left_col">
+                        <div className="flex">
+                            <div className="clubImg">
+                                <img src={clubImg} alt="clubImg"/>
+                            </div>
+                            <div className="navList">
+                                <ListNavigate
+                                    elements={[
+                                        {body: 'Клуб 1'},
+                                        {body: 'Клуб 2'},
+                                        {body: 'Клуб 3'},
+                                        {body: 'Клуб 4'},
+                                        {body: 'Клуб 5'},
+                                        {body: 'Клуб 6'},
+                                        {body: 'Клуб 7'},
+                                        {body: 'Клуб 8'},
+                                        {body: 'Клуб 9'},
+                                    ]}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </MainLayout>
     );
 };
 

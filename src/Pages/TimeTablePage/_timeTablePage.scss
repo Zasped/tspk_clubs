@@ -1,0 +1,28 @@
+@import "../../assets/style/mixins";
+
+
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  &__column{
+    &.left{
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 30%;
+      gap: 16px;
+      .title{
+        padding: 16px;
+      }
+      .subtitle{
+        padding: 16px 16px 16px 0;
+      }
+      .cldr{
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &.right{
+      flex: 1 1 70%;
+    }
+  }
+}
