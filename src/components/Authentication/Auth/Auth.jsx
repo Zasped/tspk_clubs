@@ -20,8 +20,8 @@ const Auth = ({authVisible, setAuthVisible}) => {
                 <div className="flex">
                     <div className="column">
                         <form className={'form'}>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'password'}/>
+                            <Input type={'text'} placeholder={'Логин/Почта'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'Пароль'}/>
                         </form>
                     </div>
                     <div className="column">

@@ -20,14 +20,14 @@ const Register = ({registerVisible, setRegisterVisible}) => {
                 <div className="flex">
                     <div className="column">
                         <form className={'form'}>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
-                            <Input type={'text'} placeholder={'login'} value={'asuramesocrum'}/>
+                            <Input type={'text'} placeholder={'Логин'} value={''}/>
+                            <Input type={'text'} placeholder={'Почта'} value={''}/>
+                            <Input type={'text'} placeholder={'Имя'} value={''}/>
+                            <Input type={'text'} placeholder={'Фамилия'} value={''}/>
+                            <Input type={'text'} placeholder={'Отчество'} value={''}/>
+                            <Input type={'text'} placeholder={'Группа'} value={''}/>
+                            <Input type={'text'} placeholder={'Пароль'} value={''}/>
+                            <Input type={'text'} placeholder={'Повтор пароля'} value={''}/>
                         </form>
                     </div>
                     <div className="column">

@@ -17,7 +17,7 @@ const App = () => {
 
     const [menuVisible, setMenuVisible] = useState(false);
     const [authVisible, setAuthVisible] = useState(false);
-    const [registerVisible, setRegisterVisible] = useState(true);
+    const [registerVisible, setRegisterVisible] = useState(false);
 
     return (
         <>
@@ -27,8 +27,8 @@ const App = () => {
                     <Route path={'home'} element={<MainPage/>}/>
                     <Route path={'clubs'} element={<ClubPage/>}/>
                     <Route path={'timetable'} element={<TimeTablePage/>}/>
+                    <Route path={''} element={<Navigate to="/home" replace/>}/>
                 </Route>
-                <Route path={'*'} element={<Navigate to="/home" replace/>}/>
             </Routes>
             <Menu visible={menuVisible} setMenuVisible={setMenuVisible}/>
             <Auth authVisible={authVisible} setAuthVisible={setAuthVisible} />

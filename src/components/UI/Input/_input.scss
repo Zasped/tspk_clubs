@@ -30,6 +30,8 @@ span{
     left: 10px;
     z-index: 1;
     @include text400($size: 16px, $color: var(--text-light-gray));
+    cursor: text;
+    user-select: none;
     &.active{
       top: -8px;
       left: 0;
