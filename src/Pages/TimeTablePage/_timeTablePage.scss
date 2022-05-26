@@ -3,7 +3,7 @@
 
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
 
   &__column {
 
@@ -37,9 +37,51 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
+        gap: 32px;
       }
 
+    }
+
+    &.admin{
+      flex: 1 1 30%;
+      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .title{
+        padding: 16px 0;
+      }
+
+      .subtitle{
+        padding: 16px 0;
+        @include text700($size: 18px, $color: var(--text-gray));
+        white-space: nowrap;
+      }
+
+      .update{
+        form{
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .btns{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            gap: 16px;
+          }
+        }
+      }
+      .selected__date{
+        padding: 16px 0;
+        @include text700($size: 18px, $color: var(--text-gray));
+        white-space: nowrap;
+      }
+      .delete{
+        display: flex;
+        align-self: center;
+      }
     }
 
   }

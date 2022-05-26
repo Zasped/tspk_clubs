@@ -16,7 +16,7 @@ span{
       box-shadow: var(--shadow);
       @include text400($color: var(--text-gray));
       &+.label{
-        top: -8px;
+        top: -15%;
         left: 0;
         @include text400($size: 14px, $color: var(--text-gray));
       }
@@ -25,15 +25,15 @@ span{
 
   .label {
     transition: .2s ease-in;
-    position: absolute;
-    top: 15px;
+    position: absolute !important;
+    top: 40%;
     left: 10px;
     z-index: 1;
     @include text400($size: 16px, $color: var(--text-light-gray));
     cursor: text;
     user-select: none;
     &.active{
-      top: -8px;
+      top: -15%;
       left: 0;
       @include text400($size: 14px, $color: var(--text-gray));
     }

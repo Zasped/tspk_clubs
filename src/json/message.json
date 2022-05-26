@@ -1,0 +1,434 @@
+{
+  "id": 1,
+  "date": "2022-05-22",
+  "corpusId": 1,
+  "createdAt": "2022-05-22T14:07:35.000Z",
+  "updatedAt": "2022-05-22T14:07:35.000Z",
+  "corpus": {
+    "id": 1,
+    "number": 1,
+    "name": "1-й корпус",
+    "createdAt": "2022-05-22T13:56:11.000Z",
+    "updatedAt": "2022-05-22T13:56:11.000Z"
+  },
+  "group_lesson": [
+    {
+      "id": 1,
+      "elementId": 1,
+      "groupId": 1,
+      "createdAt": "2022-05-22T14:05:16.000Z",
+      "updatedAt": "2022-05-22T14:05:16.000Z",
+      "GroupLessonTimetable": {
+        "id": 1,
+        "group_lesson": 1,
+        "timetable": 1
+      },
+      "group": {
+        "id": 1,
+        "name": "НК-21",
+        "createdAt": "2022-05-22T13:56:55.000Z",
+        "updatedAt": "2022-05-22T13:56:55.000Z"
+      },
+      "element": [
+        {
+          "id": 1,
+          "scheduleId": 1,
+          "lessonId": 2,
+          "cabinetId": 1,
+          "teacherId": 3,
+          "createdAt": "2022-05-22T14:03:20.000Z",
+          "updatedAt": "2022-05-22T14:03:20.000Z",
+          "schedule": {
+            "id": 1,
+            "position": 1,
+            "start": "08:30:00",
+            "end": "10:00:00",
+            "createdAt": "2022-05-22T13:58:27.000Z",
+            "updatedAt": "2022-05-22T13:58:27.000Z"
+          },
+          "lesson": {
+            "id": 2,
+            "name": "Математика",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "207",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 3,
+            "login": "asuramesocrum",
+            "email": "asuramesocrum@gmail.com",
+            "first_name": "Asurame",
+            "last_name": "Socrum",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-22T10:00:09.000Z",
+            "updatedAt": "2022-05-22T10:00:09.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 1,
+          "lessonId": 2,
+          "cabinetId": 1,
+          "teacherId": 3,
+          "createdAt": "2022-05-22T14:03:20.000Z",
+          "updatedAt": "2022-05-22T14:03:20.000Z",
+          "schedule": {
+            "id": 1,
+            "position": 2,
+            "start": "08:30:00",
+            "end": "10:00:00",
+            "createdAt": "2022-05-22T13:58:27.000Z",
+            "updatedAt": "2022-05-22T13:58:27.000Z"
+          },
+          "lesson": {
+            "id": 2,
+            "name": "Математика1",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "209",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 3,
+            "login": "asuramesocrum2",
+            "email": "asuramesocrum@gmail.com",
+            "first_name": "Asurame1",
+            "last_name": "Socrum1",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-22T10:00:09.000Z",
+            "updatedAt": "2022-05-22T10:00:09.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 1,
+          "lessonId": 2,
+          "cabinetId": 1,
+          "teacherId": 3,
+          "createdAt": "2022-05-22T14:03:20.000Z",
+          "updatedAt": "2022-05-22T14:03:20.000Z",
+          "schedule": {
+            "id": 1,
+            "position": 2,
+            "start": "08:30:00",
+            "end": "10:00:00",
+            "createdAt": "2022-05-22T13:58:27.000Z",
+            "updatedAt": "2022-05-22T13:58:27.000Z"
+          },
+          "lesson": {
+            "id": 2,
+            "name": "Математика1",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "209",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 3,
+            "login": "asuramesocrum2",
+            "email": "asuramesocrum@gmail.com",
+            "first_name": "Asurame1",
+            "last_name": "Socrum1",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-22T10:00:09.000Z",
+            "updatedAt": "2022-05-22T10:00:09.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 1,
+          "lessonId": 2,
+          "cabinetId": 1,
+          "teacherId": 3,
+          "createdAt": "2022-05-22T14:03:20.000Z",
+          "updatedAt": "2022-05-22T14:03:20.000Z",
+          "schedule": {
+            "id": 1,
+            "position": 2,
+            "start": "08:30:00",
+            "end": "10:00:00",
+            "createdAt": "2022-05-22T13:58:27.000Z",
+            "updatedAt": "2022-05-22T13:58:27.000Z"
+          },
+          "lesson": {
+            "id": 2,
+            "name": "Математика1",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "209",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 3,
+            "login": "asuramesocrum2",
+            "email": "asuramesocrum@gmail.com",
+            "first_name": "Asurame1",
+            "last_name": "Socrum1",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-22T10:00:09.000Z",
+            "updatedAt": "2022-05-22T10:00:09.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 1,
+          "lessonId": 2,
+          "cabinetId": 1,
+          "teacherId": 3,
+          "createdAt": "2022-05-22T14:03:20.000Z",
+          "updatedAt": "2022-05-22T14:03:20.000Z",
+          "schedule": {
+            "id": 1,
+            "position": 2,
+            "start": "08:30:00",
+            "end": "10:00:00",
+            "createdAt": "2022-05-22T13:58:27.000Z",
+            "updatedAt": "2022-05-22T13:58:27.000Z"
+          },
+          "lesson": {
+            "id": 2,
+            "name": "Математика1",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "209",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 3,
+            "login": "asuramesocrum2",
+            "email": "asuramesocrum@gmail.com",
+            "first_name": "Asurame1",
+            "last_name": "Socrum1",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-22T10:00:09.000Z",
+            "updatedAt": "2022-05-22T10:00:09.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "elementId": 2,
+      "groupId": 1,
+      "createdAt": "2022-05-22T14:05:33.000Z",
+      "updatedAt": "2022-05-22T14:05:33.000Z",
+      "GroupLessonTimetable": {
+        "id": 2,
+        "group_lesson": 2,
+        "timetable": 1
+      },
+      "group": {
+        "id": 1,
+        "name": "НК-22",
+        "createdAt": "2022-05-22T13:56:55.000Z",
+        "updatedAt": "2022-05-22T13:56:55.000Z"
+      },
+      "element": [
+        {
+          "id": 2,
+          "scheduleId": 2,
+          "lessonId": 1,
+          "cabinetId": 1,
+          "teacherId": 2,
+          "createdAt": "2022-05-22T14:04:48.000Z",
+          "updatedAt": "2022-05-22T14:04:48.000Z",
+          "schedule": {
+            "id": 2,
+            "position": 2,
+            "start": "10:20:00",
+            "end": "11:50:00",
+            "createdAt": "2022-05-22T14:00:43.000Z",
+            "updatedAt": "2022-05-22T14:00:43.000Z"
+          },
+          "lesson": {
+            "id": 1,
+            "name": "Теор. и мет. осн. организ. продукт. видов деятельности ",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "207",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 2,
+            "login": "asuramesocrum1",
+            "email": "asuramesocrum1@gmail.com",
+            "first_name": "Asurame",
+            "last_name": "Socrum",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-21T09:43:12.000Z",
+            "updatedAt": "2022-05-21T09:43:12.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 2,
+          "lessonId": 1,
+          "cabinetId": 1,
+          "teacherId": 2,
+          "createdAt": "2022-05-22T14:04:48.000Z",
+          "updatedAt": "2022-05-22T14:04:48.000Z",
+          "schedule": {
+            "id": 2,
+            "position": 2,
+            "start": "10:20:00",
+            "end": "11:50:00",
+            "createdAt": "2022-05-22T14:00:43.000Z",
+            "updatedAt": "2022-05-22T14:00:43.000Z"
+          },
+          "lesson": {
+            "id": 1,
+            "name": "Теор. и мет. осн. организ. продукт. видов деятельности ",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "207",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 2,
+            "login": "asuramesocrum1",
+            "email": "asuramesocrum1@gmail.com",
+            "first_name": "Asurame",
+            "last_name": "Socrum",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-21T09:43:12.000Z",
+            "updatedAt": "2022-05-21T09:43:12.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 2,
+          "lessonId": 1,
+          "cabinetId": 1,
+          "teacherId": 2,
+          "createdAt": "2022-05-22T14:04:48.000Z",
+          "updatedAt": "2022-05-22T14:04:48.000Z",
+          "schedule": {
+            "id": 2,
+            "position": 2,
+            "start": "10:20:00",
+            "end": "11:50:00",
+            "createdAt": "2022-05-22T14:00:43.000Z",
+            "updatedAt": "2022-05-22T14:00:43.000Z"
+          },
+          "lesson": {
+            "id": 1,
+            "name": "Теор. и мет. осн. организ. продукт. видов деятельности ",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "207",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 2,
+            "login": "asuramesocrum1",
+            "email": "asuramesocrum1@gmail.com",
+            "first_name": "Asurame",
+            "last_name": "Socrum",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-21T09:43:12.000Z",
+            "updatedAt": "2022-05-21T09:43:12.000Z"
+          }
+        },
+        {
+          "id": 2,
+          "scheduleId": 2,
+          "lessonId": 1,
+          "cabinetId": 1,
+          "teacherId": 2,
+          "createdAt": "2022-05-22T14:04:48.000Z",
+          "updatedAt": "2022-05-22T14:04:48.000Z",
+          "schedule": {
+            "id": 2,
+            "position": 2,
+            "start": "10:20:00",
+            "end": "11:50:00",
+            "createdAt": "2022-05-22T14:00:43.000Z",
+            "updatedAt": "2022-05-22T14:00:43.000Z"
+          },
+          "lesson": {
+            "id": 1,
+            "name": "Теор. и мет. осн. организ. продукт. видов деятельности ",
+            "createdAt": "2022-05-22T13:57:14.000Z",
+            "updatedAt": "2022-05-22T13:57:14.000Z"
+          },
+          "cabinet": {
+            "id": 1,
+            "name": "207",
+            "floor": 2,
+            "createdAt": "2022-05-22T14:03:10.000Z",
+            "updatedAt": "2022-05-22T14:03:10.000Z"
+          },
+          "teacher": {
+            "id": 2,
+            "login": "asuramesocrum1",
+            "email": "asuramesocrum1@gmail.com",
+            "first_name": "Asurame",
+            "last_name": "Socrum",
+            "sur_name": "Polnaylybvi",
+            "groupId": null,
+            "password": "asuramesocrum",
+            "createdAt": "2022-05-21T09:43:12.000Z",
+            "updatedAt": "2022-05-21T09:43:12.000Z"
+          }
+        }
+      ]
+    }
+  ]
+}

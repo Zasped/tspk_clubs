@@ -3,7 +3,7 @@ import './_mainPage.scss';
 import Card from "../../components/UI/Card/Card";
 import romb from "../../assets/images/romb.svg";
 import ClubsBySpecialty from "../../assets/images/ClubsBySpecialty.png";
-import ListNavigate from "../../components/UI/ListNavigate/ListNavigate";
+import ListNavigate from "../../components/ListNavigate/ListNavigate";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faArrowDown,

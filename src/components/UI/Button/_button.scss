@@ -1,0 +1,31 @@
+@import "src/assets/style/mixins";
+
+.btn{
+  @include text400($size: 18px, $color: var(--text));
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+
+  &.white{
+    border: 1px solid var(--border);
+    background-color: var(--background);
+  }
+
+  &.confirm{
+    background-color: var(--service-green);
+    color: var(--text-white);
+    box-shadow: var(--shadow);
+  }
+
+  &.denied{
+    background-color: var(--service-red);
+    color: var(--text-white);
+    box-shadow: var(--shadow);
+  }
+
+  &.auth{
+    background-color: var(--mega-red);
+    color: var(--text-white);
+    box-shadow: var(--shadow);
+  }
+}

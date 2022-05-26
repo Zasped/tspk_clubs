@@ -2,70 +2,37 @@ import React from 'react';
 import './_clubPage.scss';
 import Card from "../../components/UI/Card/Card";
 import clubImg from "../../assets/images/clubImg.png";
-import ListNavigate from "../../components/UI/ListNavigate/ListNavigate";
+import ListNavigate from "../../components/ListNavigate/ListNavigate";
 import vk from '../../assets/images/vk.svg';
 import discord from '../../assets/images/discord.svg';
 import telegram from '../../assets/images/telegram.svg';
 import MainLayout from "../../layout/MainLayout/MainLayout";
+import ClubId from "../../components/ClubId/ClubId";
+import {Outlet, useParams} from 'react-router-dom';
+import styled from 'styled-components';
 
 const ClubPage = () => {
+
+    const params = useParams();
+
+    const DIV = styled.div`
+      &::before {
+        content: '${params.id}';
+      }
+    `
     return (
         <MainLayout>
-            <div className="flex clubPage_flex">
+            {/*<div className="flex clubPage_flex">*/}
+            <DIV className='flex clubPage_flex'>
                 <div className="column clubPage_column">
                     <div className="club__list">
                         <div className="club__list__text">
                             Список клубов
                         </div>
                     </div>
-                    <div className="page__title">
-                        <Card
-                            title={'Описание'}
-                            children={'Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.'}
-                            style={{background: 'var(--mega-red)'}}
-                            fontColorDesc={'var(--text-white)'}
-                            fontColorTitle={'var(--text-white)'}
-                        />
-                    </div>
-                    <div className={"description_club"}>
-                        <Card
-                            title={'Ведущий клуба'}
-                            fontSizeTitle={'18px'}
-                            children={'Asurame Socrum'}
-                        />
-                        <Card
-                            title={'Куратор'}
-                            fontSizeTitle={'18px'}
-                            children={'Asurame Socrum'}
-                        />
-                        <Card
-                            title={'Ссылки'}
-                            fontSizeTitle={'18px'}
-                        >
-                            <a href={'#'} className={'social'}>
-                                <img src={discord} alt=""/>
-                                <span>Discord</span>
-                            </a>
-                            <a href={'#'} className={'social'}>
-                                <img src={vk} alt=""/>
-                                <span>VK</span>
-                            </a>
-                            <a href={'#'} className={'social'}>
-                                <img src={telegram} alt=""/>
-                                <span>Telegram</span>
-                            </a>
-                        </Card>
-                        <Card
-                            title={'Расписание занятий'}
-                            fontSizeTitle={'18px'}
-                        >
-                            <p>Занятия проходят в еженедельной форме в определённой аудитории, оффициальный график
-                                предоставлен ниже.</p>
-                            <p>График не зависит от оффициального графика, место его проведения и время встреч может
-                                быть изменено руководящим отделением.</p>
 
-                        </Card>
-                    </div>
+                    <Outlet/>
+
                 </div>
 
                 <div className="column clubPage_column">
@@ -92,7 +59,8 @@ const ClubPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </DIV>
+            {/*</div>*/}
         </MainLayout>
     );
 };

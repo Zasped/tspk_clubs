@@ -1,0 +1,29 @@
+@import "../../assets/style/mixins";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 32px;
+  text-align: right;
+  padding: 16px 10px;
+
+  &_item {
+    @include text400($size: 16px, $color: var(--text-gray));
+    cursor: pointer;
+    white-space: nowrap;
+    &.active {
+      @include text700($size: 18px, $color: var(--text));
+
+      &::before {
+        content: '/ ';
+        @include text700($size: 18px, $color: var(--mega-red));
+      }
+    }
+  }
+}
+
+
+
+
+

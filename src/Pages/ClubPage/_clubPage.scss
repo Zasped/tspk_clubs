@@ -17,7 +17,6 @@
   }
 
   &::before {
-    content: 'Клуб 1';
     position: absolute;
     top: 45%;
     right: -20px;
@@ -87,6 +86,25 @@
         }
       }
 
+      .days{
+        display: flex;
+        align-self: center;
+        .day{
+          &:first-letter{
+            text-transform: uppercase;
+          }
+          width: 32px;
+          height: 32px;
+          text-align: center;
+          line-height: 32px;
+          &.active{
+            background-color: var(--mega-red);
+            color: var(--text-white);
+            box-shadow: var(--shadow);
+          }
+        }
+      }
+
     }
 
     .left_col {
@@ -116,7 +134,7 @@
       }
 
       .subtitle__block {
-        padding: 9% 0 0 3%;
+        padding: 8% 0 0 3%;
         position: relative;
         display: flex;
         gap: 16px;

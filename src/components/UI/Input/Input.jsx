@@ -1,5 +1,5 @@
 import React, {useId, useState} from 'react';
-import './_input.scss';
+import styles from './_input.module.scss';
 
 
 const Input = ({type, value, placeholder, ...rest}) => {
@@ -9,16 +9,15 @@ const Input = ({type, value, placeholder, ...rest}) => {
 
     return (
         <span>
-
             <input
                 id={id}
                 type={type}
-                {...rest}
-                className={'input'}
+                className={styles.input}
                 onChange={e => setInp(e.target.value)}
                 value={inp}
+                {...rest}
             />
-            <label htmlFor={id} className={(inp ? 'label active' : 'label')}>
+            <label htmlFor={id} className={(inp ? [styles.label, styles.active].join(' ') : styles.label)}>
                 {placeholder}
             </label>
         </span>

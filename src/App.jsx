@@ -12,6 +12,7 @@ import {
     Navigate
 } from "react-router-dom";
 import TimeTablePage from "./Pages/TimeTablePage/TimeTablePage";
+import ClubId from "./components/ClubId/ClubId";
 
 const App = () => {
 
@@ -22,17 +23,25 @@ const App = () => {
     return (
         <>
             <Header setMenuVisible={setMenuVisible} setAuthVisible={setAuthVisible}/>
+
             <Routes>
                 <Route path={'/'}>
-                    <Route path={'home'} element={<MainPage/>}/>
-                    <Route path={'clubs'} element={<ClubPage/>}/>
+                    <Route path={'home'} element={<MainPage/>}>
+                        <Route path={':id'} element={''}/>
+                    </Route>
+                    <Route path={'clubs'} element={<Navigate to="/clubs/1" replace/>}/>
+                    <Route path={'clubs'} element={<ClubPage/>}>
+                        <Route path={':id'} element={<ClubId/>}/>
+                    </Route>
                     <Route path={'timetable'} element={<TimeTablePage/>}/>
                     <Route path={''} element={<Navigate to="/home" replace/>}/>
+                    <Route path={'*'} element={<Navigate to="/home" replace/>}/>
                 </Route>
             </Routes>
+
             <Menu visible={menuVisible} setMenuVisible={setMenuVisible}/>
-            <Auth authVisible={authVisible} setAuthVisible={setAuthVisible} />
-            <Register registerVisible={registerVisible} setRegisterVisible={setRegisterVisible}/>
+            <Auth authVisible={authVisible} setAuthVisible={setAuthVisible} setRegisterVisible={setRegisterVisible}/>
+            <Register registerVisible={registerVisible} setRegisterVisible={setRegisterVisible} setAuthVisible={setAuthVisible}/>
             <Footer/>
         </>
     );

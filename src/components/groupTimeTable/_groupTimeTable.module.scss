@@ -14,12 +14,12 @@
   }
 
   .group__lessons {
-    
+
     &__item {
       padding: 8px 0;
       display: flex;
       align-items: center;
-      min-height: 75px;
+      height: 81px;
       border-bottom: 1px solid var(--border);
       @include text400($size: 16px, $color: var(--text-gray));
 
@@ -44,7 +44,8 @@
       }
 
       .name__lesson {
-        padding: 02px;
+        width: 100%;
+        padding: 2px;
         text-align: center;
       }
     }

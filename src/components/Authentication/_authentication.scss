@@ -1,5 +1,9 @@
 @import "../../assets/style/mixins";
 
+.active{
+  display: block;
+}
+
 .head {
   justify-content: space-between;
   display: flex;
@@ -59,24 +63,6 @@
         justify-content: center;
         gap: 16px;
         flex-wrap: wrap-reverse;
-
-        .btn {
-          @include text400($size: 18px, $color: var(--text));
-          padding: 12px 32px;
-          border: none;
-          cursor: pointer;
-
-          &:first-child {
-            border: 1px solid var(--border);
-            background-color: white;
-          }
-
-          &:last-child {
-            background-color: var(--mega-red);
-            color: var(--text-white);
-            box-shadow: var(--shadow);
-          }
-        }
       }
 
       p {
@@ -99,7 +85,7 @@
 
 @media (max-width: 426px) {
   .flex .column .form{
-    padding: 0 5%;
+    padding: 16px 5%;
     min-height: 50vh;
     overflow: hidden;
   }
