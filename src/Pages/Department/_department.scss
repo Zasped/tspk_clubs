@@ -1,0 +1,65 @@
+@import "src/assets/style/mixins";
+
+.department_flex{
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  .department_column{
+    flex: 1 1 50%;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    &.sidebar{
+      flex: 1 1 15%;
+      .navigate{
+        align-items: flex-start;
+      }
+    }
+    .department__info{
+      .info__management{
+          padding: 16px;
+        &__name{
+          @include text700($size: 20px, $color: var(--text));
+          margin-bottom: 16px;
+        }
+        &__description{
+          @include text400($size: 16px, $color: var(--text-gray));
+        }
+      }
+      .links__management{
+        .social {
+          background-color: var(--mega-red);
+          box-shadow: var(--shadow);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          max-width: 200px;
+          width: 100%;
+
+          img {
+            width: 32px;
+            height: 32px;
+            padding: 16px;
+            box-sizing: content-box;
+            object-fit: fill;
+          }
+
+          span {
+            @include text400($color: var(--text-white));
+          }
+        }
+      }
+      .icon__management{
+        display: flex;
+        justify-content: center;
+        .icon{
+          padding: 16px;
+          width: 60px;
+          height: 60px;
+          object-fit: fill;
+          box-sizing: content-box;
+        }
+      }
+    }
+  }
+}

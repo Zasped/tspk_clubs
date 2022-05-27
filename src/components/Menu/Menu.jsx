@@ -40,7 +40,7 @@ const Menu = ({visible, setMenuVisible}) => {
                         <Link to={'timetable'} onClick={closeModal}>
                             <MenuLinks icon={faCalendarDays} text={'Расписание'}/>
                         </Link>
-                        <Link to={'home'} onClick={closeModal}>
+                        <Link to={'department'} onClick={closeModal}>
                             <MenuLinks icon={faBaby} text={'Руководящие отделением'}/>
                         </Link>
                         <Link to={'home'} onClick={closeModal}>

@@ -1,13 +1,8 @@
 import React from 'react';
 import './_clubPage.scss';
-import Card from "../../components/UI/Card/Card";
 import clubImg from "../../assets/images/clubImg.png";
 import ListNavigate from "../../components/ListNavigate/ListNavigate";
-import vk from '../../assets/images/vk.svg';
-import discord from '../../assets/images/discord.svg';
-import telegram from '../../assets/images/telegram.svg';
 import MainLayout from "../../layout/MainLayout/MainLayout";
-import ClubId from "../../components/ClubId/ClubId";
 import {Outlet, useParams} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -22,7 +17,6 @@ const ClubPage = () => {
     `
     return (
         <MainLayout>
-            {/*<div className="flex clubPage_flex">*/}
             <DIV className='flex clubPage_flex'>
                 <div className="column clubPage_column">
                     <div className="club__list">
@@ -60,7 +54,6 @@ const ClubPage = () => {
                     </div>
                 </div>
             </DIV>
-            {/*</div>*/}
         </MainLayout>
     );
 };
