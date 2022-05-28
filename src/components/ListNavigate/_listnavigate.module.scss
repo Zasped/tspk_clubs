@@ -18,6 +18,7 @@
       &::before {
         content: '/ ';
         @include text700($size: 18px, $color: var(--mega-red));
+        white-space: nowrap;
       }
     }
   }

@@ -1,18 +1,42 @@
 @import "src/assets/style/mixins";
 
+.department__list {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+  &__text {
+    box-shadow: var(--shadow);
+    padding: 14px 30px;
+    text-align: center;
+    background-color: var(--mega-red);
+    color: var(--text-white);
+  }
+}
+
 .department_flex{
   display: flex;
   min-height: 100%;
   align-items: center;
+  gap: 16px;
   .department_column{
-    flex: 1 1 50%;
+    flex: 1 1 75%;
     gap: 16px;
     display: flex;
     flex-direction: column;
-    &.sidebar{
-      flex: 1 1 15%;
+    &.navList{
+      flex: 1 1 20%;
+      max-height: 85vh;
       .navigate{
         align-items: flex-start;
+      }
+    }
+    .department_flex{
+      flex-wrap: wrap;
+      .department_column{
+        flex: 1 1 49%;
       }
     }
     .department__info{
@@ -59,6 +83,19 @@
           object-fit: fill;
           box-sizing: content-box;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .department__list{
+    display: flex;
+  }
+  .department_flex{
+    .department_column{
+      &.navList{
+        display: none;
       }
     }
   }

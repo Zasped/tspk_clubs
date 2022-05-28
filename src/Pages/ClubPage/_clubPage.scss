@@ -133,6 +133,11 @@
         }
       }
 
+      .navList{
+        max-height: 80vh;
+        overflow: auto;
+      }
+
       .subtitle__block {
         padding: 8% 0 0 3%;
         position: relative;

@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 import MainPage from "./Pages/MainPage/MainPage";
 import Register from "./components/Authentication/Register/Register";
 import Auth from "./components/Authentication/Auth/Auth";
-import Menu from "./components/Menu/Menu";
+import Menu from "./components/Modal/Menu/Menu";
 import ClubPage from "./Pages/ClubPage/ClubPage";
 import {
     Routes,
