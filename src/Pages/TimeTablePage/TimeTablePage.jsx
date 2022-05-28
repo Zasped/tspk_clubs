@@ -31,10 +31,24 @@ const TimeTablePage = () => {
                 <div className="wrapper__column right">
                     <div className="groupTimeTable">
                         {rasp.group_lesson.map((element) =>
-                            <GroupTimeTable
-                                title={element.group.name}
-                                lessons={element.element}
-                            />
+                            <>
+                                <GroupTimeTable
+                                    title={element.group.name}
+                                    lessons={element.element}
+                                />
+                                <GroupTimeTable
+                                    title={element.group.name}
+                                    lessons={element.element}
+                                />
+                                <GroupTimeTable
+                                    title={element.group.name}
+                                    lessons={element.element}
+                                />
+                                <GroupTimeTable
+                                    title={element.group.name}
+                                    lessons={element.element}
+                                />
+                            </>
                         )}
 
                     </div>
@@ -48,12 +62,12 @@ const TimeTablePage = () => {
                     </div>
                     <div className="update">
                         <form>
-                            <Input type={'text'} placeholder={'Предмет'} />
-                            <Input type={'text'} placeholder={'Преподаватель'} />
-                            <Input type={'text'} placeholder={'Кабинет'} />
+                            <Input type={'text'} placeholder={'Предмет'}/>
+                            <Input type={'text'} placeholder={'Преподаватель'}/>
+                            <Input type={'text'} placeholder={'Кабинет'}/>
                             <div className="btns">
                                 <Button title={'Сохранить'} classes={'confirm'}/>
-                                <Button title={'Очистить'} classes={'denied'} />
+                                <Button title={'Очистить'} classes={'denied'}/>
                             </div>
                         </form>
                     </div>

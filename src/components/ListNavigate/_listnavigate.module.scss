@@ -6,6 +6,7 @@
   align-items: flex-end;
   gap: 32px;
   padding: 16px 10px;
+  overflow: auto;
 
   &_item {
     @include text400($size: 16px, $color: var(--text-gray));

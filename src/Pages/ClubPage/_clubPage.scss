@@ -263,12 +263,20 @@
     }
   }
 
-  .clubPage_flex .clubPage_column .left_col .subtitle__block {
-    flex-direction: column;
-    gap: 42px;
+  .clubPage_flex {
+    &::after{
+      right: -5px;
+    }
+    &::before{
+      right: -11px;
+    }
+    .clubPage_column .left_col .subtitle__block {
+      flex-direction: column;
+      gap: 42px;
 
-    &::after, &::before {
-      display: none;
+      &::after, &::before {
+        display: none;
+      }
     }
   }
 

@@ -15,48 +15,19 @@ const GroupTimeTable = ({title, lessons}) => {
             </div>
             <div className={styles.group__lessons}>
                 {lessons.map((item, index) => {
-                    if (index === 0 && item.schedule.position === 1 || index !== 0 && item.schedule.position !== 1) {
-                        return <div className={styles.group__lessons__item} key={item.id}>
-                            <div className={styles.number__lesson}><span>{item.schedule.position}</span></div>
-                            <div className={styles.time__lesson}>
-                                <div
-                                    className={styles.time__lesson__start}>{item.schedule.start.replace(':00', '')}</div>
-                                <div className={styles.time__lesson__end}>{item.schedule.end.replace(':00', '')}</div>
-                            </div>
-                            <div className={styles.name__lesson}>
-                                {item.lesson.name}
-                                <br/>
-                                {item.teacher.first_name + ' ' + item.teacher.last_name}{' Каб.'}{item.cabinet.name}
-                            </div>
+                    return <div className={styles.group__lessons__item} key={item.id}>
+                        <div className={styles.number__lesson}><span>{item.schedule.position}</span></div>
+                        <div className={styles.time__lesson}>
+                            <div
+                                className={styles.time__lesson__start}>{item.schedule.start.replace(':00', '')}</div>
+                            <div className={styles.time__lesson__end}>{item.schedule.end.replace(':00', '')}</div>
                         </div>
-                    }else if(index === 0 && item.schedule.position !== 1){
-                        return <>
-                            <div className={styles.group__lessons__item} key={item.id}>
-                                <div className={styles.number__lesson}><span>{index + 1}</span></div>
-                                <div className={styles.time__lesson}>
-                                    <div
-                                        className={styles.time__lesson__start}>{time.arrStart[index]}</div>
-                                    <div className={styles.time__lesson__end}>{time.arrEnd[index]}</div>
-                                </div>
-                                <div className={styles.name__lesson}>
-                                    {null}
-                                </div>
-                            </div>
-                            <div className={styles.group__lessons__item} key={item.id}>
-                                <div className={styles.number__lesson}><span>{item.schedule.position}</span></div>
-                                <div className={styles.time__lesson}>
-                                    <div
-                                        className={styles.time__lesson__start}>{item.schedule.start.replace(':00', '')}</div>
-                                    <div className={styles.time__lesson__end}>{item.schedule.end.replace(':00', '')}</div>
-                                </div>
-                                <div className={styles.name__lesson}>
-                                    {item.lesson.name}
-                                    <br/>
-                                    {item.teacher.first_name + ' ' + item.teacher.last_name}{' Каб.'}{item.cabinet.name}
-                                </div>
-                            </div>
-                        </>
-                    }
+                        <div className={styles.name__lesson}>
+                            {item.lesson.name}
+                            <br/>
+                            {item.teacher.first_name + ' ' + item.teacher.last_name}{' Каб.'}{item.cabinet.name}
+                        </div>
+                    </div>
 
                 })}
             </div>
