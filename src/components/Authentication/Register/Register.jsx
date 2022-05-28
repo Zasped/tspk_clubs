@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import Title from "../../UI/Title/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
@@ -7,8 +7,19 @@ import imgQuote from '../../../assets/images/quoteReg.jpg';
 import '../_authentication.scss';
 import ModalLayout from "../../../layout/ModalLayout/ModalLayout";
 import Button from "../../UI/Button/Button";
+import {Context} from "../../../index";
 
 const Register = ({registerVisible, setRegisterVisible, setAuthVisible}) => {
+
+    const [email, setEmail] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [surName, setSurName] = useState('');
+    const [group, setGroup] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm] = useState('');
+    const {store} = useContext(Context);
+
     return (
         <ModalLayout setVisible={setRegisterVisible} visible={registerVisible}>
             <div className="head">
@@ -20,14 +31,28 @@ const Register = ({registerVisible, setRegisterVisible, setAuthVisible}) => {
             <div className="flex">
                 <div className="column">
                     <form className={'form'}>
-                        <Input type={'text'} placeholder={'Логин'} value={''}/>
-                        <Input type={'text'} placeholder={'Почта'} value={''}/>
-                        <Input type={'text'} placeholder={'Имя'} value={''}/>
-                        <Input type={'text'} placeholder={'Фамилия'} value={''}/>
-                        <Input type={'text'} placeholder={'Отчество'} value={''}/>
-                        <Input type={'text'} placeholder={'Группа'} value={''}/>
-                        <Input type={'text'} placeholder={'Пароль'} value={''}/>
-                        <Input type={'text'} placeholder={'Повтор пароля'} value={''}/>
+
+                        <Input type={'email'} placeholder={'Почта'} value={email}
+                               onChange={e => setEmail(e.target.value)}/>
+
+                        <Input type={'text'} placeholder={'Имя'} value={firstName}
+                               onChange={e => setFirstName(e.target.value)}/>
+
+                        <Input type={'text'} placeholder={'Фамилия'} value={lastName}
+                               onChange={e => setLastName(e.target.value)}/>
+
+                        <Input type={'text'} placeholder={'Отчество'} value={surName}
+                               onChange={e => setSurName(e.target.value)}/>
+
+                        <Input type={'text'} placeholder={'Группа'} value={group}
+                               onChange={e => setGroup(e.target.value)}/>
+
+                        <Input type={'password'} placeholder={'Пароль'} value={password}
+                               onChange={e => setPassword(e.target.value)}/>
+
+                        <Input type={'password'} placeholder={'Повтор пароля'} value={passwordConfirm}
+                               onChange={e => setPasswordConfirm(e.target.value)}/>
+
                     </form>
                 </div>
                 <div className="column">
@@ -42,11 +67,12 @@ const Register = ({registerVisible, setRegisterVisible, setAuthVisible}) => {
                     </div>
                     <div className="block_submit">
                         <div className="btns">
-                            <Button title={'Авторизация'} classes={'white'} onClick={e => {
+                            <Button title={'Авторизация'} classes={'white'} onClick={() => {
                                 setRegisterVisible(false)
                                 setAuthVisible(true)
                             }}/>
-                            <Button title={'Регистрация'} classes={'auth'}/>
+                            <Button title={'Регистрация'} classes={'auth'}
+                                    onClick={() => store.register(email, firstName, lastName, surName, password)}/>
                         </div>
                         <p>Проблемы с регистрацией? ( ͡ಠ ʖ̯ ͡ಠ)</p>
                     </div>

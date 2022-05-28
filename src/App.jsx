@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 import TimeTablePage from "./Pages/TimeTablePage/TimeTablePage";
 import ClubId from "./components/ClubId/ClubId";
-import Department from "./Pages/Department/Department";
+import DepartmentPage from "./Pages/DepartmentPage/DepartmentPage";
 import DepartmentId from "./components/DepartmentId/DepartmentId";
 
 const App = () => {
@@ -40,7 +40,7 @@ const App = () => {
 
                     <Route path={'timetable'} element={<TimeTablePage/>}/>
 
-                    <Route path={'department'} element={<Department/>}>
+                    <Route path={'department'} element={<DepartmentPage/>}>
                         <Route path={''} element={<Navigate to="/department/1" replace />}/>
                         <Route path={':id'} element={<DepartmentId/>}/>
                     </Route>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import Title from "../../UI/Title/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
@@ -7,8 +7,17 @@ import imgQuote from '../../../assets/images/quoteAuth.jpg';
 import '../_authentication.scss';
 import ModalLayout from "../../../layout/ModalLayout/ModalLayout";
 import Button from "../../UI/Button/Button";
+import {Context} from "../../../index";
+import Cookies from "universal-cookie/es6";
 
 const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const {store} = useContext(Context);
+
+    // const cookie = new Cookies();
+
     return (
         <ModalLayout setVisible={setAuthVisible} visible={authVisible}>
             <div className="head">
@@ -20,8 +29,8 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
             <div className="flex">
                 <div className="column">
                     <form className={'form'}>
-                        <Input type={'text'} placeholder={'Логин/Почта'} value={'asuramesocrum'}/>
-                        <Input type={'password'} placeholder={'Пароль'}/>
+                        <Input type={'text'} placeholder={'Почта'} value={email} onChange={e => setEmail(e.target.value)}/>
+                        <Input type={'password'} placeholder={'Пароль'} value={password} onChange={e => setPassword(e.target.value)}/>
                     </form>
                 </div>
                 <div className="column">
@@ -36,11 +45,11 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
                     </div>
                     <div className="block_submit">
                         <div className="btns">
-                            <Button title={'Регистрация'} classes={'white'} onClick={e => {
+                            <Button title={'Регистрация'} classes={'white'} onClick={() => {
                                 setRegisterVisible(true)
                                 setAuthVisible(false)
                             }}/>
-                            <Button title={'Авторизация'} classes={'auth'}/>
+                            <Button title={'Авторизация'} classes={'auth'} onClick={() => store.login(email, password)}/>
                         </div>
                         <p>Забыл пароль? (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</p>
                     </div>

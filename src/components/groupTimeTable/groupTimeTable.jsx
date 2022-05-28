@@ -14,7 +14,7 @@ const GroupTimeTable = ({title, lessons}) => {
                 {title}
             </div>
             <div className={styles.group__lessons}>
-                {lessons.map((item, index) => {
+                {lessons.map((item) => {
                     return <div className={styles.group__lessons__item} key={item.id}>
                         <div className={styles.number__lesson}><span>{item.schedule.position}</span></div>
                         <div className={styles.time__lesson}>

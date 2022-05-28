@@ -1,10 +1,9 @@
-import React, {useId, useState} from 'react';
+import React, {useId} from 'react';
 import styles from './_input.module.scss';
 
 
 const Input = ({type, value, placeholder, ...rest}) => {
 
-    const [inp, setInp] = useState(value || null);
     const id = useId();
 
     return (
@@ -13,11 +12,10 @@ const Input = ({type, value, placeholder, ...rest}) => {
                 id={id}
                 type={type}
                 className={styles.input}
-                onChange={e => setInp(e.target.value)}
-                value={inp}
+                value={value}
                 {...rest}
             />
-            <label htmlFor={id} className={(inp ? [styles.label, styles.active].join(' ') : styles.label)}>
+            <label htmlFor={id} className={(value ? [styles.label, styles.active].join(' ') : styles.label)}>
                 {placeholder}
             </label>
         </span>
