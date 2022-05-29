@@ -15,9 +15,13 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const {store} = useContext(Context);
-
+    const [error, setError] = useState('')
     // const cookie = new Cookies();
+    function f() {
+        store.login(email, password).catch(e => setError(e.response.data))
+    }
 
+    console.log(error)
     return (
         <ModalLayout setVisible={setAuthVisible} visible={authVisible}>
             <div className="head">
@@ -30,7 +34,9 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
                 <div className="column">
                     <form className={'form'}>
                         <Input type={'text'} placeholder={'Почта'} value={email} onChange={e => setEmail(e.target.value)}/>
+                        {error?.errors?.map(el => <p key={el.email}>{el.email}</p>)}
                         <Input type={'password'} placeholder={'Пароль'} value={password} onChange={e => setPassword(e.target.value)}/>
+                        {error?.errors?.map(el => <p key={el.password}>{el.password}</p>)}
                     </form>
                 </div>
                 <div className="column">
@@ -49,7 +55,7 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
                                 setRegisterVisible(true)
                                 setAuthVisible(false)
                             }}/>
-                            <Button title={'Авторизация'} classes={'auth'} onClick={() => store.login(email, password)}/>
+                            <Button title={'Авторизация'} classes={'auth'} onClick={() => f()}/>
                         </div>
                         <p>Забыл пароль? (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</p>
                     </div>

@@ -14,13 +14,13 @@ export default class Store {
     }
 
     async login(email, password) {
-        try {
+        // try {
             const response = await AuthService.login(email, password)
             this.setAuth(true);
             this.setUser(response.data.user);
-        } catch (e) {
-            console.log(e.message);
-        }
+        // } catch (e) {
+        //     console.log(e.response.data);
+        // }
     }
 
     async register(email, first_name, last_name, sur_name, password) {
@@ -29,7 +29,7 @@ export default class Store {
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {
-            console.log(e.message);
+            console.log(e.response.data);
         }
     }
 
@@ -39,7 +39,7 @@ export default class Store {
             this.setAuth(false);
             this.setUser({});
         } catch (e) {
-            console.log(e.message);
+            console.log(e.response.data);
         }
     }
 
@@ -49,7 +49,7 @@ export default class Store {
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {
-            console.log(e);
+            console.log(e.response.data);
         }
     }
 }
