@@ -8,7 +8,7 @@ const $api = axios.create({
 });
 
 $api.interceptors.request.use((config) => {
-    config.headers.Authorization = `Bearer ${localStorage.getItem('TokenRefreshScreensaver')}`;
+    config.headers.Authorization = `Bearer ${localStorage.getItem('TokenRefreshScreensaver')}`; // исправить на cookie
     return config;
 });
 

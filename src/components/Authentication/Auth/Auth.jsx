@@ -21,7 +21,6 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
         store.login(email, password).catch(e => setError(e.response.data))
     }
 
-    console.log(error)
     return (
         <ModalLayout setVisible={setAuthVisible} visible={authVisible}>
             <div className="head">

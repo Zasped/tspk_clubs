@@ -30,25 +30,12 @@ const TimeTablePage = () => {
                 </div>
                 <div className="wrapper__column right">
                     <div className="groupTimeTable">
-                        {rasp.group_lesson.map((element) =>
-                            <>
-                                <GroupTimeTable
-                                    title={element.group.name}
-                                    lessons={element.element}
-                                />
-                                <GroupTimeTable
-                                    title={element.group.name}
-                                    lessons={element.element}
-                                />
-                                <GroupTimeTable
-                                    title={element.group.name}
-                                    lessons={element.element}
-                                />
-                                <GroupTimeTable
-                                    title={element.group.name}
-                                    lessons={element.element}
-                                />
-                            </>
+                        {rasp.dataConstructor.groupTimetable.map((el, index) =>
+                            <GroupTimeTable
+                                title={el.group}
+                                time={rasp.dataConstructor.schedule}
+                                lessons={el.lessons}
+                            />
                         )}
 
                     </div>

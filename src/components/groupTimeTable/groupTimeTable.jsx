@@ -1,35 +1,74 @@
-import React from 'react';
-import styles from './_groupTimeTable.module.scss';
+import React, {useState} from 'react';
+import './_groupTimeTable.scss';
 
-const GroupTimeTable = ({title, lessons}) => {
+const GroupTimeTable = ({title, time, lessons}) => {
 
-    const time = {
-        arrStart: ['8:30', '10:20', '12:25', '14:05', '15:40'],
-        arrEnd: ['10:00', '11:50', '13:55', '15:35', '17:10']
+    const [lessonsGroup, setLessonsGroup] = useState(lessons);
+    const [currentLesson, setCurrentLesson] = useState(null);
+
+    function dragStartHandler(e, item) {
+        setCurrentLesson(item)
     }
 
+    function dragEndHandler(e) {
+        e.target.style.background = 'transparent';
+    }
+
+    function dragOverHandler(e) {
+        e.preventDefault();
+        e.target.style.background = 'lightgray';
+    }
+
+    function dropHandler(e, item) {
+        e.preventDefault();
+        setLessonsGroup(lessonsGroup.map((el) => {
+            if (el.position === item.position){
+                return {...el, position: currentLesson.position}
+            }
+            if (el.position === currentLesson.position){
+                return {...el, position: item.position}
+            }
+        }))
+        e.target.style.background = 'transparent';
+    }
+
+    const sortLesson = (a, b) => {
+        if (a.position > b.position){
+            return 1;
+        }else{
+            return -1;
+        }
+    }
+    console.log(time)
     return (
-        <div className={styles.groupItem}>
-            <div className={styles.group__title}>
+        <div className={'groupItem'}>
+            <div className={'group__title'}>
                 {title}
             </div>
-            <div className={styles.group__lessons}>
-                {lessons.map((item) => {
-                    return <div className={styles.group__lessons__item} key={item.id}>
-                        <div className={styles.number__lesson}><span>{item.schedule.position}</span></div>
-                        <div className={styles.time__lesson}>
-                            <div
-                                className={styles.time__lesson__start}>{item.schedule.start.replace(':00', '')}</div>
-                            <div className={styles.time__lesson__end}>{item.schedule.end.replace(':00', '')}</div>
+            <div className={'group__lessons'}>
+                {lessonsGroup.sort(sortLesson).map((item, index) =>
+                    <div
+                        className={'group__lessons__item'}
+                        key={item.id}
+                        draggable={true}
+                        onDragStart={e => dragStartHandler(e, item)}
+                        onDragLeave={e => dragEndHandler(e)}
+                        onDragEnd={e => dragEndHandler(e)}
+                        onDragOver={e => dragOverHandler(e)}
+                        onDrop={e => dropHandler(e, item)}
+                    >
+                        <div className={'number__lesson'}><span>{time.position}</span></div>
+                        <div className={'time__lesson'}>
+                            <div className={'time__lesson__start'}>{time[index].startTime}</div>
+                            <div className={'time__lesson__end'}>{time[index].endTime}</div>
                         </div>
-                        <div className={styles.name__lesson}>
-                            {item.lesson.name}
+                        <div className={'name__lesson'}>
+                            {item.lesson}
                             <br/>
-                            {item.teacher.first_name + ' ' + item.teacher.last_name}{' Каб.'}{item.cabinet.name}
+                            {item.teacher} {item.cabinet}
                         </div>
                     </div>
-
-                })}
+                )}
             </div>
         </div>
     );

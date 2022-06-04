@@ -1,7 +1,7 @@
 import React from 'react';
 import './_mainPage.scss';
 import Card from "../../components/UI/Card/Card";
-import romb from "../../assets/images/romb.svg";
+import hive from "../../assets/images/romb.svg";
 import ClubsBySpecialty from "../../assets/images/ClubsBySpecialty.png";
 import ListNavigate from "../../components/ListNavigate/ListNavigate";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -33,7 +33,7 @@ const MainPage = () => {
                                              color={'#fff'}/>
                             <FontAwesomeIcon icon={faCalendarDays} size={'1x'} className={'images__item'}
                                              color={'#fff'}/>
-                            <img src={romb} alt="" className={'images__item'}/>
+                            <img src={hive} alt="" className={'images__item'}/>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const MainPage = () => {
                                     elements={[
                                         {body: 'Клубы-по-специальностям'},
                                         {body: 'Практическое-применение'},
-                                        {body: 'Расписание-http'},
+                                        {body: 'Расписание-API'},
                                     ]}
                                 />
                             </div>
