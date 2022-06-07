@@ -4,6 +4,7 @@ import App from "./App";
 import './assets/style/main.scss';
 import {BrowserRouter} from "react-router-dom";
 import Store from "./store/store";
+import Cookies from "universal-cookie";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

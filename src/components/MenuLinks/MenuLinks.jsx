@@ -5,7 +5,9 @@ import styles from './_menuLinks.module.scss';
 const MenuLinks = ({text, icon}) => {
     return (
         <div className={styles.block__item}>
-            <FontAwesomeIcon icon={icon} size={"1x"} className={styles.block__item__image} color={'#fff'}/>
+            <div className={styles.block__item__image}>
+                <FontAwesomeIcon icon={icon} size={"1x"} className={styles.icon} color={'#fff'}/>
+            </div>
             <p className={styles.block__item__text}>
                 {text}
             </p>

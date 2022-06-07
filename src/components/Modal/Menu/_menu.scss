@@ -9,7 +9,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: var(--mega-red);
+  background-color: var(--main-color);
   z-index: 5;
 
   &.active{
@@ -31,13 +31,14 @@
 
       .title {
 
-        @include text700($size: 24px, $color: var(--text-white));
+        @include text700($size: var(--size-text-24px), $color: var(--text-white));
         gap: 16px;
-
+        text-shadow: var(--shadow);
       }
 
       .close {
         cursor: pointer;
+        filter: drop-shadow(var(--shadow));
       }
     }
 

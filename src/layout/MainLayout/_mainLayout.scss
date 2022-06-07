@@ -1,6 +1,21 @@
 .main {
   display: flex;
   flex: 1 1 auto;
+
+  .container{
+    &::after, &::before{
+      writing-mode: vertical-lr;
+      text-align: center;
+    }
+
+    &::before{
+      content: '(￣y▽￣)╭ Ohohoho.....';
+
+    }
+    &::after{
+      content: '┌( ಠ_ಠ)┘';
+    }
+  }
 }
 
 .flex {
@@ -16,9 +31,10 @@
 
 .container{
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
   flex: 1 1 auto;
   padding: 0 5%;
+  justify-content: center;
 }
 
 @media (max-width: 1025px) {

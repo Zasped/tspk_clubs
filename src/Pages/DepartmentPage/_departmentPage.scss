@@ -11,7 +11,7 @@
     box-shadow: var(--shadow);
     padding: 14px 30px;
     text-align: center;
-    background-color: var(--mega-red);
+    background-color: var(--main-color);
     color: var(--text-white);
   }
 }
@@ -43,16 +43,16 @@
       .info__management{
           padding: 16px;
         &__name{
-          @include text700($size: 20px, $color: var(--text));
+          @include text700($size: var(--size-text-20px), $color: var(--text));
           margin-bottom: 16px;
         }
         &__description{
-          @include text400($size: 16px, $color: var(--text-gray));
+          @include text400($color: var(--text-gray));
         }
       }
       .links__management{
         .social {
-          background-color: var(--mega-red);
+          background-color: var(--main-color);
           box-shadow: var(--shadow);
           display: flex;
           align-items: center;

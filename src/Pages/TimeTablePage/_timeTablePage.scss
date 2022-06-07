@@ -55,7 +55,7 @@
 
       .subtitle{
         padding: 16px 0;
-        @include text700($size: 18px, $color: var(--text-gray));
+        @include text700($color: var(--text-gray));
         white-space: nowrap;
       }
 
@@ -75,7 +75,7 @@
       }
       .selected__date{
         padding: 16px 0;
-        @include text700($size: 18px, $color: var(--text-gray));
+        @include text700($color: var(--text-gray));
         white-space: nowrap;
       }
       .delete{

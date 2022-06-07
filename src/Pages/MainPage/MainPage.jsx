@@ -1,17 +1,16 @@
 import React from 'react';
 import './_mainPage.scss';
-import Card from "../../components/UI/Card/Card";
 import hive from "../../assets/images/romb.svg";
-import ClubsBySpecialty from "../../assets/images/ClubsBySpecialty.png";
-import ListNavigate from "../../components/ListNavigate/ListNavigate";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {
-    faArrowDown,
-    faArrowUp,
-    faCalendarDays,
-    faCubesStacked,
-} from "@fortawesome/free-solid-svg-icons";
+import {faCalendarDays, faCubesStacked, faInfo} from "@fortawesome/free-solid-svg-icons";
 import MainLayout from "../../layout/MainLayout/MainLayout";
+import Accordion from "../../components/Accordion/Accordion";
+import Title from "../../components/UI/Title/Title";
+import Subtitle from "../../components/UI/Subtitle/Subtitle";
+import akame from "../../assets/images/akamepng.png";
+import ashuramaru from "../../assets/images/ashuramaru.png";
+import telka from "../../assets/images/telka.png";
+
 
 const MainPage = () => {
     return (
@@ -19,55 +18,61 @@ const MainPage = () => {
             <div className="flex mainPage_flex">
 
                 <div className="column mainPage_column">
-                    <div className="page__title">
-                        <Card
-                            fontSizeTitle={'24px'}
-                            title={'SCREENSAVER'}
-                            children={'Основной задачи проекта является структуризация клубов и их работ, а так же для более удобного учёт для преподователей.'}
-                        />
+                    <div className="title">
+                        <Title title={'SCREENSAVER'}/>
                     </div>
-                    <div className={"fast__nav"}>
-                        <h1 className={'fast__nav__title'}>Быстрая навигация</h1>
-                        <div className={"images"}>
-                            <FontAwesomeIcon icon={faCubesStacked} size={"1x"} className={'images__item'}
-                                             color={'#fff'}/>
-                            <FontAwesomeIcon icon={faCalendarDays} size={'1x'} className={'images__item'}
-                                             color={'#fff'}/>
-                            <img src={hive} alt="" className={'images__item'}/>
+                    <div className="subtitle">
+                        <div className="subtitle__item">
+                            <Subtitle>
+                                Просто скринсейвер, проект разработанный для удобного взаимодействия клубов и учеников, а
+                                так же разработаны интерфейсы для более удобного взаимодействия с некоторыми задачами.
+                            </Subtitle>
+                        </div>
+                        <div className="subtitle__item">
+
                         </div>
                     </div>
+                    <div className={"fast__nav"}>
+                        <div className="fast__nav__item">
+                            <h1 className={'fast__nav__item__title'}>Быстрая навигация</h1>
+                            <div className={"images"}>
+                                <div className="images__item"><FontAwesomeIcon icon={faCubesStacked} size={"1x"}
+                                                                               className={'icon'} color={'#fff'}/></div>
+                                <div className="images__item"><FontAwesomeIcon icon={faCalendarDays} size={'1x'}
+                                                                               className={'icon'} color={'#fff'}/></div>
+                                <div className="images__item"><img src={hive} alt="" className={'icon'}/></div>
+                            </div>
+                        </div>
+                        <div className="fast__nav__item">
+
+                        </div>
+                    </div>
+                    <Accordion
+                        data={[
+                            {
+                                title: 'Расписание',
+                                body: 'Разработан интерфейс для создания редактирование расписание занятий колледжа, подробная статистика о количестве проведённых занятий, удобная сортировка поиск определённой группы и возможность получить доступ к данный c помощью REST API. Подробну документацию по использованию API в личной кабинете.',
+                                icon: faCalendarDays,
+                            },
+                            {
+                                title: 'Клубы',
+                                body: 'Разработан интерфейс для создания редактирование расписание занятий колледжа, подробная статистика о количестве проведённых занятий, удобная сортировка поиск определённой группы и возможность получить доступ к данный c помощью REST API. Подробну документацию по использованию API в личной кабинете.',
+                                icon: faCubesStacked,
+                            },
+                            {
+                                title: 'Информация',
+                                body: 'Разработан интерфейс для создания редактирование расписание занятий колледжа, подробная статистика о количестве проведённых занятий, удобная сортировка поиск определённой группы и возможность получить доступ к данный c помощью REST API. Подробну документацию по использованию API в личной кабинете.',
+                                icon: faInfo,
+                            }
+                        ]}
+                    />
                 </div>
 
                 <div className="column mainPage_column">
-                    <div className="left_col">
-                        <div className="flex">
-                            <div className="ClubsBySpecialty">
-                                <div className="clubImg">
-                                    <img src={ClubsBySpecialty} alt=""/>
-                                </div>
-                                <p className="ClubsBySpecialty__title">Клубы по специальностям</p>
-                            </div>
-                            <div className="navList">
-                                <ListNavigate
-                                    elements={[
-                                        {body: 'Клубы-по-специальностям'},
-                                        {body: 'Практическое-применение'},
-                                        {body: 'Расписание-API'},
-                                    ]}
-                                />
-                            </div>
-                        </div>
-                        <div className={'subtitle__block'}>
-                            <p className={'subtitle__text'}>
-                                Место встречи людей с едиными интересами для определённого вида деятельности в рамках
-                                той
-                                или иной профессии (Специальности). <span>Хобби.</span>
-                            </p>
-                            <div className="subtitle__arrows">
-                                <FontAwesomeIcon icon={faArrowUp} size={'2x'} color={'#5E5A60'} className={'arrow'}/>
-                                <FontAwesomeIcon icon={faArrowDown} size={'2x'} color={'#5E5A60'} className={'arrow'}/>
-                            </div>
-                        </div>
+                    <div className="images">
+                        <div className="images__item"><img src={akame} alt="" width={256}/></div>
+                        <div className="images__item"><img src={ashuramaru} alt="" width={256}/></div>
+                        <div className="images__item"><img src={telka} alt="" width={256}/></div>
                     </div>
                 </div>
             </div>

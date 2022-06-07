@@ -1,12 +1,4 @@
-@mixin randomText($color, $size: 16px, $weight: 400) {
-  font: {
-    weight: $weight;
-    size: $size;
-  }
-  color: $color;
-}
-
-@mixin text700($color, $size: 16px){
+@mixin text700($color, $size: var(--size-text-18px)){
   font: {
     weight: 700;
     size: $size;
@@ -14,7 +6,7 @@
   color: $color;
 }
 
-@mixin text400($color, $size: 16px){
+@mixin text400($color, $size: var(--size-text-16px)){
   font: {
     weight: 400;
     size: $size;

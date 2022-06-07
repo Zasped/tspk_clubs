@@ -9,15 +9,15 @@
   overflow: auto;
 
   &_item {
-    @include text400($size: 16px, $color: var(--text-gray));
+    @include text400($color: var(--text-gray));
     cursor: pointer;
     white-space: nowrap;
     &.active {
-      @include text700($size: 18px, $color: var(--text));
+      @include text700($color: var(--text));
 
       &::before {
         content: '/ ';
-        @include text700($size: 18px, $color: var(--mega-red));
+        @include text700($color: var(--main-color));
         white-space: nowrap;
       }
     }

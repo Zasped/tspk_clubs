@@ -18,7 +18,7 @@ span{
       &+.label{
         top: -15%;
         left: 0;
-        @include text400($size: 14px, $color: var(--text-gray));
+        @include text400($size: var(--size-text-14px), $color: var(--text-gray));
       }
     }
   }
@@ -29,13 +29,13 @@ span{
     top: 40%;
     left: 10px;
     z-index: 1;
-    @include text400($size: 16px, $color: var(--text-light-gray));
+    @include text400($color: var(--text-light-gray));
     cursor: text;
     user-select: none;
     &.active{
       top: -15%;
       left: 0;
-      @include text400($size: 14px, $color: var(--text-gray));
+      @include text400($size: var(--size-text-14px), $color: var(--text-gray));
     }
   }
 }

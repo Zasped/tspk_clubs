@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MainPage from "./Pages/MainPage/MainPage";
-import Register from "./components/Authentication/Register/Register";
-import Auth from "./components/Authentication/Auth/Auth";
+import Register from "./components/Modal/Authentication/Register/Register";
+import Auth from "./components/Modal/Authentication/Auth/Auth";
 import Menu from "./components/Modal/Menu/Menu";
 import ClubPage from "./Pages/ClubPage/ClubPage";
 import {

@@ -1,4 +1,4 @@
-@import "../../assets/style/mixins";
+@import "../../../assets/style/mixins";
 
 .head {
   justify-content: space-between;
@@ -44,7 +44,7 @@
           display: block;
           width: 100%;
           text-align: end;
-          @include text400($size: 14px, $color: var(--text-gray));
+          @include text400($size: var(--size-text-14px), $color: var(--text-gray));
         }
       }
     }

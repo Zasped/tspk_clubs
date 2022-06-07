@@ -1,22 +1,24 @@
 @import "../../assets/style/mixins";
 
 .header {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
 
   &::before {
     content: '';
     width: 100%;
     display: block;
-    background-color: var(--mega-red);
+    background-color: var(--main-color);
     height: 8px;
     box-shadow: var(--shadow);
   }
 
   .content {
-    padding: 1.2em 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 64px;
+    width: 100%;
   }
 
   &__menu {
@@ -24,38 +26,22 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    @include text700($color: var(--text), $size: 16px);
+    @include text700($size: var(--size-text-16px), $color: var(--text));
     gap: 10px;
   }
 
   &__nav {
     display: flex;
     text-transform: uppercase;
+    align-items: center;
+    gap: 16px;
 
     &__item {
-      @include text700($color: var(--text));
+      @include text700($size: var(--size-text-16px), $color: var(--text));
       cursor: pointer;
-
-      &:not(:last-child)::after {
-        content: '/';
-        margin: 0 14px;
-
-        @include text700($color: var(--mega-red));
-      }
-    }
-  }
-}
-
-@media (max-width: 426px) {
-
-  .header__nav {
-    &__item {
-      &::after {
-        display: none;
-      }
-
-      &:last-child {
-        display: none;
+      .icon{
+        width: 24px;
+        height: 24px;
       }
     }
   }

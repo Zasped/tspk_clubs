@@ -5,38 +5,8 @@
   flex-wrap: wrap;
   position: relative;
 
-  &::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 3px;
-    top: 0;
-    right: -10px;
-    position: absolute;
-    background-color: var(--border);
-  }
-
-  &::before {
-    position: absolute;
-    top: 45%;
-    right: -20px;
-    writing-mode: vertical-lr;
-    background-color: var(--background);
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-
   .clubPage_column {
     padding: 14px;
-
-    &:first-child {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 100px;
-    }
 
     .club__list {
       width: 100%;
@@ -49,157 +19,149 @@
         box-shadow: var(--shadow);
         padding: 14px 30px;
         text-align: center;
-        background-color: var(--mega-red);
+        background-color: var(--main-color);
         color: var(--text-white);
       }
     }
 
     .page__title {
-      min-width: 100%;
+      width: 100%;
       box-shadow: var(--shadow);
+      padding: 16px 8px;
+      background-color: var(--main-color);
     }
 
-    .description_club {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+    .description__club {
 
-      .social {
-        background-color: var(--mega-red);
-        box-shadow: var(--shadow);
+      &__top {
         display: flex;
-        align-items: center;
-        gap: 8px;
-        max-width: 200px;
-        width: 100%;
 
-        img {
-          width: 32px;
-          height: 32px;
+        &__column {
+          flex: 1 1 50%;
+
+          .description {
+            padding: 16px;
+          }
+
+          .info__leaders {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+
+            > * {
+              flex: 1 1 50%;
+            }
+
+            .leader {
+              .name {
+                padding: 16px;
+              }
+            }
+
+            .tutor {
+              .name {
+                padding: 16px;
+              }
+            }
+          }
+
+          .club__schedule {
+            padding: 16px;
+
+            .text {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              padding: 16px;
+            }
+
+            hr {
+              border: 1px solid var(--main-color);
+            }
+
+            .days {
+              display: flex;
+              justify-content: center;
+              padding: 16px;
+
+              .day {
+                &:first-letter {
+                  text-transform: uppercase;
+                }
+
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+
+                &.active {
+                  background-color: var(--main-color);
+                  color: var(--text-white);
+                  box-shadow: var(--shadow);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__bottom {
+        display: flex;
+
+        &__column {
+          flex: 1 1 50%;
           padding: 16px;
-          box-sizing: content-box;
-          object-fit: fill;
-        }
 
-        span {
-          @include text400($color: var(--text-white));
-        }
-      }
+          .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 16px;
+            .links__list {
+              display: flex;
+              justify-content: center;
+              gap: 16px;
+              .social {
+                background-color: var(--main-color);
+                box-shadow: var(--shadow);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                max-width: fit-content;
 
-      .days{
-        display: flex;
-        align-self: center;
-        .day{
-          &:first-letter{
-            text-transform: uppercase;
+                img {
+                  width: 32px;
+                  height: 32px;
+                  padding: 16px;
+                  box-sizing: content-box;
+                  object-fit: fill;
+                  filter: drop-shadow(var(--shadow));
+                }
+
+                span {
+                  @include text400($color: var(--text-white));
+                }
+              }
+            }
           }
-          width: 32px;
-          height: 32px;
-          text-align: center;
-          line-height: 32px;
-          &.active{
-            background-color: var(--mega-red);
-            color: var(--text-white);
-            box-shadow: var(--shadow);
-          }
-        }
-      }
 
-    }
-
-    .left_col {
-      position: relative;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      .flex {
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .clubImg {
-        width: 90%;
-        flex: 0 1 70%;
-        border: 3px solid var(--mega-red);
-
-        img {
-          display: block;
-          width: 100%;
-          object-fit: cover;
-          max-height: 512px;
-          object-position: top;
-        }
-      }
-
-      .navList{
-        max-height: 80vh;
-        overflow: auto;
-      }
-
-      .subtitle__block {
-        padding: 8% 0 0 3%;
-        position: relative;
-        display: flex;
-        gap: 16px;
-
-        &::before, &::after {
-          content: '';
-          display: block;
-          background-color: var(--mega-red);
-          position: absolute;
-          right: 40px;
-          bottom: 0;
-        }
-
-        &::before {
-          width: 1px;
-          height: 17px;
-        }
-
-        &::after {
-          width: 33px;
-          height: 1px;
-        }
-
-        .subtitle__text {
-          @include text400($size: 18px, $color: #595D6C);
-
-
-          span {
-            &::after {
-              content: ' __';
+          .media{
+            padding: 16px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .border{
+              width: 100%;
+              height: 100%;
+              border: 1px solid var(--main-color);
             }
           }
         }
       }
     }
-
-    .right_col {
-      transform: translateX(10px);
-      writing-mode: vertical-lr;
-      text-align: center;
-
-      span {
-        background: white;
-        padding: 10px 0;
-        display: inline-block;
-        color: var(--text-gray);
-
-        &::before, &::after {
-          content: '';
-          display: block;
-        }
-
-        &::after {
-          height: 100%;
-
-        }
-      }
-    }
   }
-
 }
 
 @media (max-width: 1025px) {
@@ -269,12 +231,14 @@
   }
 
   .clubPage_flex {
-    &::after{
+    &::after {
       right: -5px;
     }
-    &::before{
+
+    &::before {
       right: -11px;
     }
+
     .clubPage_column .left_col .subtitle__block {
       flex-direction: column;
       gap: 42px;

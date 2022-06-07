@@ -1,13 +1,13 @@
 import React, {useContext, useState} from 'react';
-import Title from "../../UI/Title/Title";
+import Title from "../../../UI/Title/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
-import Input from "../../UI/Input/Input";
-import imgQuote from '../../../assets/images/quoteReg.jpg';
+import Input from "../../../UI/Input/Input";
+import imgQuote from '../../../../assets/images/quoteReg.jpg';
 import '../_authentication.scss';
-import ModalLayout from "../../../layout/ModalLayout/ModalLayout";
-import Button from "../../UI/Button/Button";
-import {Context} from "../../../index";
+import ModalLayout from "../../../../layout/ModalLayout/ModalLayout";
+import Button from "../../../UI/Button/Button";
+import {Context} from "../../../../index";
 
 const Register = ({registerVisible, setRegisterVisible, setAuthVisible}) => {
 
