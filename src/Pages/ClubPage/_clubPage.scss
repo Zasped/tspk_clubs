@@ -7,15 +7,16 @@
 
   .clubPage_column {
     padding: 14px;
+    gap: 32px;
 
-    .club__list {
+    >.club__list {
       width: 100%;
       display: none;
       justify-content: center;
       align-items: center;
       padding: 20px 0;
 
-      &__text {
+      .club__list__text {
         box-shadow: var(--shadow);
         padding: 14px 30px;
         text-align: center;
@@ -29,6 +30,11 @@
       box-shadow: var(--shadow);
       padding: 16px 8px;
       background-color: var(--main-color);
+      text-transform: uppercase;
+
+      .title{
+        color: var(--text-white);
+      }
     }
 
     .description__club {
@@ -40,7 +46,7 @@
           flex: 1 1 50%;
 
           .description {
-            padding: 16px;
+            padding: 0 16px 16px;
           }
 
           .info__leaders {
@@ -66,7 +72,7 @@
           }
 
           .club__schedule {
-            padding: 16px;
+            padding: 0 16px 16px;
 
             .text {
               display: flex;
@@ -152,11 +158,97 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            .border{
+            .video{
               width: 100%;
-              height: 100%;
+              height: 190px;
               border: 1px solid var(--main-color);
             }
+          }
+        }
+      }
+    }
+
+    .clubs__select{
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      .current__club{
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        max-width: 256px;
+        .club__icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 256px;
+          height: 256px;
+          background-color: var(--main-color);
+          box-shadow: var(--shadow);
+          .icon{
+            width: 164px;
+            height: auto;
+            filter: drop-shadow(var(--shadow));
+          }
+        }
+        > .quote{
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          .quote__text{
+            @include text400($size: var(--size-text-18px), $color: var(--text-gray));
+            &::before{
+              content: '“';
+              color: var(--main-color);
+            }
+            &::after{
+              content: '”';
+              color: var(--main-color);
+            }
+          }
+          .quote__author{
+            @include text400($size: var(--size-text-14px), $color: var(--text-gray));
+            text-align: end;
+          }
+        }
+        .nav__arrow{
+          display: flex;
+          justify-content: center;
+          gap: 32px;
+          .arrow{
+            width: 25px;
+            height: auto;
+            color: var(--text-gray);
+          }
+        }
+      }
+      .club__list{
+        display: flex;
+        max-width: 50%;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px;
+        &__item{
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          height: fit-content;
+          &__image{
+            width: 64px;
+            height: 64px;
+            background-color: var(--main-color);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon{
+              filter: drop-shadow(var(--shadow));
+              width: 34px;
+              height: auto;
+            }
+          }
+          &__name{
+            @include text400($size: var(--size-text-16px), $color: var(--text-gray));
           }
         }
       }

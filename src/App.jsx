@@ -15,6 +15,8 @@ import TimeTablePage from "./Pages/TimeTablePage/TimeTablePage";
 import ClubId from "./components/ClubId/ClubId";
 import DepartmentPage from "./Pages/DepartmentPage/DepartmentPage";
 import DepartmentId from "./components/DepartmentId/DepartmentId";
+import HonorDeskPage from "./Pages/HonorDeskPage/HonorDeskPage";
+import HonorDeskId from "./components/HonorDeskId/HonorDeskId";
 
 const App = () => {
 
@@ -28,21 +30,23 @@ const App = () => {
 
             <Routes>
                 <Route path={'/'}>
-                    <Route path={'home'} element={<MainPage/>}>
-                        <Route path={''} element={<Navigate to="/home/1" replace />}/>
-                        <Route path={':id'} element={''}/>
-                    </Route>
+                    <Route path={'home'} element={<MainPage/>}/>
 
                     <Route path={'clubs'} element={<ClubPage/>}>
-                        <Route path={''} element={<Navigate to="/clubs/1" replace />}/>
+                        <Route path={''} element={<Navigate to="/clubs/1" replace/>} />
                         <Route path={':id'} element={<ClubId/>}/>
                     </Route>
 
                     <Route path={'timetable'} element={<TimeTablePage/>}/>
 
                     <Route path={'department'} element={<DepartmentPage/>}>
-                        <Route path={''} element={<Navigate to="/department/1" replace />}/>
+                        <Route path={''} element={<Navigate to="/department/1" replace/>}/>
                         <Route path={':id'} element={<DepartmentId/>}/>
+                    </Route>
+
+                    <Route path={'honordesk'} element={<HonorDeskPage/>}>
+                        <Route path={''} element={<Navigate to="/honordesk/1" replace/>}/>
+                        <Route path={':id'} element={<HonorDeskId/>}/>
                     </Route>
 
                     <Route path={''} element={<Navigate to="/home" replace/>}/>

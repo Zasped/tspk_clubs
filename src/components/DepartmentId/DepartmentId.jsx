@@ -3,52 +3,35 @@ import Subtitle from "../../components/UI/Subtitle/Subtitle";
 import discord from "../../assets/images/discord.svg";
 import vk from "../../assets/images/vk.svg";
 import telegram from "../../assets/images/telegram.svg";
-import Card from "../../components/UI/Card/Card";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBowlingBall} from "@fortawesome/free-solid-svg-icons";
+import ataman from "../../assets/images/ataman.png";
 
 const Department = () => {
 
     return (
-        <div className="department_flex">
-            <div className="department_column">
-                <div className="department__info">
-                    <div className="info__management">
-                        <h1 className={'info__management__name'}>Атаманюк Викентий Евгеньевич</h1>
-                        <Subtitle classNames={['info__management__description']}>
-                            Преподователь спец. дисциплин по специальности “Информационные системы и
-                            программирование” по
-                            компетенции “Программные решения для бизнеса”
-                        </Subtitle>
-                    </div>
-                    <div className="links__management">
-                        <Card
-                            title={'Ссылки'}
-                            fontSizeTitle={'18px'}
-                        >
-                            <a href={'#'} className={'social'}>
-                                <img src={discord} alt=""/>
-                                <span>Discord</span>
-                            </a>
-                            <a href={'#'} className={'social'}>
-                                <img src={vk} alt=""/>
-                                <span>VK</span>
-                            </a>
-                            <a href={'#'} className={'social'}>
-                                <img src={telegram} alt=""/>
-                                <span>Telegram</span>
-                            </a>
-                        </Card>
-                    </div>
-                    <div className={'icon__management'}>
-                        <FontAwesomeIcon icon={faBowlingBall} size={'1x'} className={'icon'}/>
-                    </div>
-                </div>
+        <div className="info__management">
+            <div className="info__management__image">
+                <img src={ataman} className={'image'}/>
             </div>
-            <div className="department_column">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate dicta dolor fugiat
-                impedit
-                magni nisi, officiis provident qui voluptatibus.
+            <div className="info__management__name">
+                Атаманюк Викентий Евгеньевич
+            </div>
+            <div className="info__management__description">
+                Разработчики заявили о намечающемся редизайне Валентайн: все изображения креста будут
+                заменены на изображения розового сюрикена. Все спрайты в Skullgirls 2nd Encore и Skullgirls
+                Mobile должны измениться.
+            </div>
+            <div className="info__management__links">
+                <Subtitle classNames={['links__list']}>
+                    <a href={'#'} className={'social'}>
+                        <img src={discord} alt=""/>
+                    </a>
+                    <a href={'#'} className={'social'}>
+                        <img src={vk} alt=""/>
+                    </a>
+                    <a href={'#'} className={'social'}>
+                        <img src={telegram} alt=""/>
+                    </a>
+                </Subtitle>
             </div>
         </div>
     );

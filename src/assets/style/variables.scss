@@ -14,10 +14,10 @@
   --shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   --shadow-inset: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
 
-  --size-text-24px: clamp(1.2rem, 1.4rem + 1.6vw, 1.6rem);
-  --size-text-22px: clamp(1.075rem, 1.275rem + 1.6vw, 1.475rem);
-  --size-text-20px: clamp(.95rem, 1.15rem + 1.6vw, 1.35rem);
-  --size-text-18px: clamp(.825rem, 1.025rem + 1.6vw, 1.225rem);
-  --size-text-16px: clamp(.7rem, .9rem + 1.6vw, 1.1rem);
-  --size-text-14px: clamp(.575rem, .775rem + 1.6vw, .975rem);
+  --size-text-24px: clamp(1.175rem, 1.375rem + 1.6vw, 1.575rem);
+  --size-text-22px: clamp(1.05rem, 1.25rem + 1.6vw, 1.45rem);
+  --size-text-20px: clamp(.925rem, 1.125rem + 1.6vw, 1.325rem);
+  --size-text-18px: clamp(.8rem, 1rem + 1.6vw, 1.2rem);
+  --size-text-16px: clamp(.675rem, .875rem + 1.6vw, 1.075rem);
+  --size-text-14px: clamp(.55rem, .75rem + 1.6vw, .95rem);
 }

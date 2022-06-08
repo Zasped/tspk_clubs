@@ -1,27 +1,26 @@
 import React from 'react';
-import Card from "../UI/Card/Card";
 import discord from "../../assets/images/discord.svg";
 import vk from "../../assets/images/vk.svg";
 import telegram from "../../assets/images/telegram.svg";
-import {useParams} from "react-router-dom";
+import {useOutletContext, useParams} from "react-router-dom";
 import Title from "../UI/Title/Title";
 import Subtitle from "../UI/Subtitle/Subtitle";
 
 const ClubId = () => {
 
-    const {id} = useParams();
+    const infoClub = useOutletContext();
+
     return (
         <>
             <div className="page__title">
-                <Title title={'BLOCKCHAIN'} fontColor={'var(--text-white)'}/>
+                <Title title={infoClub.name} classNames={['title']}/>
             </div>
 
             <div className={"description__club"}>
                 <div className="description__club__top">
                     <div className="description__club__top__column">
-                        <Subtitle classNames={['description']}>Откройте новое направление в бизнесе вместе с Битрикс24.
-                            Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все
-                            подробности голосом.
+                        <Subtitle classNames={['description']}>
+                            {infoClub.description}
                         </Subtitle>
                         <div className="info__leaders">
                             <div className="leader">
@@ -84,7 +83,7 @@ const ClubId = () => {
                     <div className="description__club__bottom__column">
                         <div className="media">
                             <Title title={'Медиа'}/>
-                            <div className="border"></div>
+                            <div className="video"></div>
                         </div>
                     </div>
 

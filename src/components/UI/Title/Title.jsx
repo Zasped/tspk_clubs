@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './_title.module.scss';
 
-const Title = ({title, fontSize, fontColor}) => {
+const Title = ({title, classNames}) => {
     return (
-        <h1 className={styles.title} style={{fontSize: fontSize, color: fontColor}}>{title}</h1>
+        <h1 className={(classNames) ? [styles.title, classNames].join(' ') : styles.title}>{title}</h1>
     );
 };
 
