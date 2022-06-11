@@ -1,0 +1,19 @@
+.row__list {
+  display: flex;
+
+  .row__list__column {
+    .fieldName {
+      padding: 4px 0 4px 16px;
+    }
+
+    .fieldText {
+      padding: 4px 16px;
+
+      &::before {
+        content: '/';
+        margin-right: 16px;
+      }
+    }
+
+  }
+}

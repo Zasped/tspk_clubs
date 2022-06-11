@@ -2,7 +2,7 @@
 
 
 .clubPage_flex {
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   position: relative;
 
   .clubPage_column {
@@ -41,6 +41,7 @@
 
       &__top {
         display: flex;
+        flex-wrap: wrap;
 
         &__column {
           flex: 1 1 50%;
@@ -53,8 +54,9 @@
             display: flex;
             justify-content: space-between;
             padding: 16px;
+            flex-wrap: wrap;
 
-            > * {
+            & > * {
               flex: 1 1 50%;
             }
 
@@ -113,6 +115,7 @@
 
       &__bottom {
         display: flex;
+        flex-wrap: wrap;
 
         &__column {
           flex: 1 1 50%;
@@ -127,28 +130,6 @@
               display: flex;
               justify-content: center;
               gap: 16px;
-              .social {
-                background-color: var(--main-color);
-                box-shadow: var(--shadow);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 8px;
-                max-width: fit-content;
-
-                img {
-                  width: 32px;
-                  height: 32px;
-                  padding: 16px;
-                  box-sizing: content-box;
-                  object-fit: fill;
-                  filter: drop-shadow(var(--shadow));
-                }
-
-                span {
-                  @include text400($color: var(--text-white));
-                }
-              }
             }
           }
 
@@ -249,6 +230,8 @@
           }
           &__name{
             @include text400($size: var(--size-text-16px), $color: var(--text-gray));
+            padding: 0 8px;
+            flex: 1;
           }
         }
       }
@@ -256,17 +239,63 @@
   }
 }
 
-@media (max-width: 1025px) {
-  .clubPage_flex .clubPage_column .fast__nav {
-    align-self: center;
-    max-width: none;
+.modal__content{
+
+  .club__list{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+    overflow: auto;
+
+    .active{
+      background-color: var(--main-color);
+
+      .club__list__item{
+        box-shadow: var(--shadow);
+
+        .club__list__item__image{
+          box-shadow: none;
+        }
+        .club__list__item__name{
+          @include text400($size: var(--size-text-16px), $color: var(--text-white));
+        }
+      }
+    }
+
+    &__item{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: fit-content;
+
+      &__image{
+        width: 64px;
+        height: 64px;
+        background-color: var(--main-color);
+        box-shadow: var(--shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon{
+          filter: drop-shadow(var(--shadow));
+          width: 34px;
+          height: auto;
+        }
+      }
+      &__name{
+        @include text400($size: var(--size-text-16px), $color: var(--text-gray));
+        padding: 0 8px;
+        flex: 1;
+      }
+    }
   }
 }
+
 
 @media (max-width: 891px) {
   .clubPage_flex {
     gap: 20px;
-
   }
 }
 
@@ -274,71 +303,13 @@
   .clubPage_flex .clubPage_column {
     padding: 0;
 
-    &:first-child {
-      gap: 40px;
+    &:last-child{
+      display: none;
     }
 
     .club__list {
       display: flex;
     }
-
-    .left_col {
-      display: none;
-    }
   }
 }
 
-@media (max-width: 581px) {
-
-  .clubPage_flex {
-
-    .clubPage_column {
-      .left_col {
-        padding: 0 10px;
-
-        .flex {
-          justify-content: center;
-        }
-      }
-
-      .right_col {
-        transform: translateX(-10px);
-      }
-    }
-  }
-}
-
-@media (max-width: 426px) {
-
-  .header__nav {
-    &__item {
-      &::after {
-        display: none;
-      }
-
-      &:last-child {
-        display: none;
-      }
-    }
-  }
-
-  .clubPage_flex {
-    &::after {
-      right: -5px;
-    }
-
-    &::before {
-      right: -11px;
-    }
-
-    .clubPage_column .left_col .subtitle__block {
-      flex-direction: column;
-      gap: 42px;
-
-      &::after, &::before {
-        display: none;
-      }
-    }
-  }
-
-}

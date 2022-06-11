@@ -17,6 +17,7 @@ import DepartmentPage from "./Pages/DepartmentPage/DepartmentPage";
 import DepartmentId from "./components/DepartmentId/DepartmentId";
 import HonorDeskPage from "./Pages/HonorDeskPage/HonorDeskPage";
 import HonorDeskId from "./components/HonorDeskId/HonorDeskId";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 
 const App = () => {
 
@@ -39,6 +40,8 @@ const App = () => {
 
                     <Route path={'timetable'} element={<TimeTablePage/>}/>
 
+                    <Route path={'profile'} element={<ProfilePage/>}/>
+
                     <Route path={'department'} element={<DepartmentPage/>}>
                         <Route path={''} element={<Navigate to="/department/1" replace/>}/>
                         <Route path={':id'} element={<DepartmentId/>}/>
@@ -54,11 +57,11 @@ const App = () => {
                 </Route>
             </Routes>
 
+            <Footer/>
 
             <Auth authVisible={authVisible} setAuthVisible={setAuthVisible} setRegisterVisible={setRegisterVisible}/>
             <Menu visible={menuVisible} setMenuVisible={setMenuVisible}/>
             <Register registerVisible={registerVisible} setRegisterVisible={setRegisterVisible} setAuthVisible={setAuthVisible}/>
-            <Footer/>
         </>
     );
 };

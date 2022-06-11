@@ -39,7 +39,7 @@ const GroupTimeTable = ({title, time, lessons}) => {
             return -1;
         }
     }
-    console.log(time)
+
     return (
         <div className={'groupItem'}>
             <div className={'group__title'}>
@@ -50,19 +50,20 @@ const GroupTimeTable = ({title, time, lessons}) => {
                     <div
                         className={'group__lessons__item'}
                         key={item.id}
-                        draggable={true}
-                        onDragStart={e => dragStartHandler(e, item)}
-                        onDragLeave={e => dragEndHandler(e)}
-                        onDragEnd={e => dragEndHandler(e)}
-                        onDragOver={e => dragOverHandler(e)}
-                        onDrop={e => dropHandler(e, item)}
                     >
                         <div className={'number__lesson'}><span>{time.position}</span></div>
                         <div className={'time__lesson'}>
                             <div className={'time__lesson__start'}>{time[index].startTime}</div>
                             <div className={'time__lesson__end'}>{time[index].endTime}</div>
                         </div>
-                        <div className={'name__lesson'}>
+                        <div className={'name__lesson'}
+                             draggable={true}
+                             onDragStart={e => dragStartHandler(e, item)}
+                             onDragLeave={e => dragEndHandler(e)}
+                             onDragEnd={e => dragEndHandler(e)}
+                             onDragOver={e => dragOverHandler(e)}
+                             onDrop={e => dropHandler(e, item)}
+                        >
                             {item.lesson}
                             <br/>
                             {item.teacher} {item.cabinet}

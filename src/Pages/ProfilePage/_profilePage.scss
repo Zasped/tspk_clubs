@@ -1,0 +1,48 @@
+@import "src/assets/style/mixins";
+
+.profilePage_flex {
+  .profilePage_column {
+    justify-content: flex-start;
+    padding: 16px 8px;
+    gap: 32px;
+
+    .page-title {
+      padding: 16px 8px;
+      background-color: var(--main-color);
+      box-shadow: var(--shadow);
+
+      .title {
+        color: var(--text-white);
+      }
+    }
+
+    .basic-info {
+      display: flex;
+      gap: 32px;
+
+      .avatar {
+        .image {
+          box-shadow: var(--shadow);
+          width: 126px;
+          height: 126px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .background-info{
+      display: flex;
+      & > *{
+        flex: 1 1 50%;
+      }
+    }
+
+    .socials{
+      .links__list{
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+      }
+    }
+  }
+}

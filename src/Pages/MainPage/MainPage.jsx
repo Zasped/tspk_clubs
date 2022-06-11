@@ -70,9 +70,9 @@ const MainPage = () => {
 
                 <div className="column mainPage_column">
                     <div className="images">
-                        <div className="images__item"><img src={akame} alt="" width={256}/></div>
-                        <div className="images__item"><img src={ashuramaru} alt="" width={256}/></div>
-                        <div className="images__item"><img src={telka} alt="" width={256}/></div>
+                        <div className="images__item"><img src={akame} alt=""/></div>
+                        <div className="images__item"><img src={ashuramaru} alt=""/></div>
+                        <div className="images__item"><img src={telka} alt=""/></div>
                     </div>
                 </div>
             </div>

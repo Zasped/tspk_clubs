@@ -5,6 +5,7 @@ import telegram from "../../assets/images/telegram.svg";
 import {useOutletContext, useParams} from "react-router-dom";
 import Title from "../UI/Title/Title";
 import Subtitle from "../UI/Subtitle/Subtitle";
+import Social from "../Social/Social";
 
 const ClubId = () => {
 
@@ -68,15 +69,9 @@ const ClubId = () => {
                         <div className="links">
                             <Title title={'Ссылки'}/>
                             <Subtitle classNames={['links__list']}>
-                                <a href={'#'} className={'social'}>
-                                    <img src={discord} alt=""/>
-                                </a>
-                                <a href={'#'} className={'social'}>
-                                    <img src={vk} alt=""/>
-                                </a>
-                                <a href={'#'} className={'social'}>
-                                    <img src={telegram} alt=""/>
-                                </a>
+                                <Social icon={discord} link={'#'}/>
+                                <Social icon={vk} link={'#'}/>
+                                <Social icon={telegram} link={'#'}/>
                             </Subtitle>
                         </div>
                     </div>

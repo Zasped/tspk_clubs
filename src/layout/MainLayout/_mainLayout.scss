@@ -31,7 +31,6 @@
 
 .container{
   display: flex;
-  //flex-direction: column;
   flex: 1 1 auto;
   padding: 0 5%;
   justify-content: center;
@@ -40,5 +39,15 @@
 @media (max-width: 1025px) {
   .container{
     padding: 0 3%;
+  }
+}
+
+@media (max-width: 420px) {
+  .main {
+    .container{
+      &::after, &::before{
+        display: none;
+      }
+    }
   }
 }

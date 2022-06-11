@@ -21,16 +21,11 @@ const HonorDeskId = () => {
                 Mobile должны измениться.
             </div>
             <div className="info__management__links">
-                <Subtitle classNames={['links__list']}>
-                    <a href={'#'} className={'social'}>
-                        <img src={discord} alt=""/>
-                    </a>
-                    <a href={'#'} className={'social'}>
-                        <img src={vk} alt=""/>
-                    </a>
-                    <a href={'#'} className={'social'}>
-                        <img src={telegram} alt=""/>
-                    </a>
+                <Subtitle classNames={['date__list']}>
+                    <div className="study__year">
+
+                    </div>
+                    <div className="honor__date"></div>
                 </Subtitle>
             </div>
         </div>

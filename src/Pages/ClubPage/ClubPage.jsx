@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './_clubPage.scss';
 import ListNavigate from "../../components/ListNavigate/ListNavigate";
 import MainLayout from "../../layout/MainLayout/MainLayout";
-import {Link, Outlet, useParams} from 'react-router-dom';
+import {Link, NavLink, Outlet, useParams} from 'react-router-dom';
 import ModalLayout from "../../layout/ModalLayout/ModalLayout";
 import Title from "../../components/UI/Title/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -118,16 +118,19 @@ const ClubPage = () => {
                                 </div>
                             </div>
                             <div className="nav__arrow">
-                                <Link to={`${(+idClub - 1 <= 0) ? clubs.length : +idClub - 1 }`}><FontAwesomeIcon icon={faArrowLeft} className={'arrow'}/></Link>
-                                <Link to={`${(+idClub + 1 > clubs.length) ? 1 : +idClub + 1}`}><FontAwesomeIcon icon={faArrowRight} className={'arrow'}/></Link>
+                                <Link to={`${(+idClub - 1 <= 0) ? clubs.length : +idClub - 1}`}><FontAwesomeIcon
+                                    icon={faArrowLeft} className={'arrow'}/></Link>
+                                <Link to={`${(+idClub + 1 > clubs.length) ? 1 : +idClub + 1}`}><FontAwesomeIcon
+                                    icon={faArrowRight} className={'arrow'}/></Link>
                             </div>
                         </div>
                         <ul className="club__list">
                             {clubs.map((el, index) => {
                                 return (index == idClub - 1) ?
                                     null :
-                                    <Link to={`${index + 1}`} key={index}>
-                                        <li className="club__list__item">
+                                    <NavLink to={`${index + 1}`} key={index}
+                                             className={({isActive}) => (isActive) ? "active" : null}>
+                                        <li className={"club__list__item"}>
                                             <div className="club__list__item__image">
                                                 <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
                                             </div>
@@ -135,32 +138,33 @@ const ClubPage = () => {
                                                 {el.name}
                                             </div>
                                         </li>
-                                    </Link>;
+                                    </NavLink>;
                             })}
                         </ul>
                     </div>
                 </div>
             </div>
+
             <ModalLayout visible={clubsListVisible} setVisible={setClubsListVisible}>
-                <div className="head">
-                    <Title title={'Клубы'}/>
+                <div className="head" style={{justifyContent: "flex-end"}}>
                     <div className="close" onClick={e => setClubsListVisible(false)}>
                         <FontAwesomeIcon icon={faXmark} size={'2x'} color={'#5E5A60'}/>
                     </div>
                 </div>
-                <ListNavigate
-                    elements={[
-                        {body: 'Клуб 1'},
-                        {body: 'Клуб 2'},
-                        {body: 'Клуб 3'},
-                        {body: 'Клуб 4'},
-                        {body: 'Клуб 5'},
-                        {body: 'Клуб 6'},
-                        {body: 'Клуб 7'},
-                        {body: 'Клуб 8'},
-                        {body: 'Клуб 9'},
-                    ]}
-                />
+                <ul className="club__list">
+                    {clubs.map((el, index) =>
+                        <NavLink to={`${index + 1}`} key={index} onClick={e => setClubsListVisible(false)}>
+                            <li className="club__list__item">
+                                <div className="club__list__item__image">
+                                    <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
+                                </div>
+                                <div className="club__list__item__name">
+                                    {el.name}
+                                </div>
+                            </li>
+                        </NavLink>
+                    )}
+                </ul>
             </ModalLayout>
         </MainLayout>
     );

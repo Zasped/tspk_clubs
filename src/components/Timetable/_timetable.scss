@@ -1,0 +1,76 @@
+@import "src/assets/style/mixins";
+
+.timetable {
+  &__tableGroup {
+    max-width: 18rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__title {
+      width: 100%;
+      min-height: 2.5rem;
+      background: var(--main-color);
+      @include text700($size: var(--size-text-22px), $color: var(--text-white));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      padding: .5rem 0;
+    }
+
+    &__lessons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &__element {
+        width: 100%;
+        min-height: 80px;
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+        height: 100%;
+
+        > .position, > .time, > .lesson {
+          padding: .2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        > .position {
+          font-weight: bold;
+          min-width: 2rem;
+        }
+
+        > .time {
+          min-width: 3rem;
+          font-size: var(--fs-standard);
+
+          span {
+            display: block;
+          }
+        }
+
+        > .lesson {
+          width: 100%;
+          font-size: var(--fs-standard);
+          cursor: pointer;
+          transition: .1s ease;
+
+          &.hovered {
+            transform: scale(.8);
+          }
+
+          span {
+            pointer-events: none;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
