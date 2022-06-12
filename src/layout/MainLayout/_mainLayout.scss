@@ -3,17 +3,61 @@
   flex: 1 1 auto;
 
   .container{
-    &::after, &::before{
+    .smile{
       writing-mode: vertical-lr;
       text-align: center;
-    }
+      background-color: white;
+      &.left{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        &::after{
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 50%;
+          display: block;
+          height: 100%;
+          width: 2px;
+          background-color: var(--line);
+        }
 
-    &::before{
-      content: '(￣y▽￣)╭ Ohohoho.....';
+        span{
+          background-color: white;
+          position: relative;
+          z-index: 2;
+          display: block;
+          height: 300px;
+        }
+      }
 
-    }
-    &::after{
-      content: '┌( ಠ_ಠ)┘';
+      &.right{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        &::after{
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 50%;
+          display: block;
+          height: 100%;
+          width: 2px;
+          background-color: var(--line);
+        }
+
+        span{
+          background-color: white;
+          position: relative;
+          z-index: 2;
+          display: block;
+          height: 300px;
+        }
+      }
     }
   }
 }
@@ -42,7 +86,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 455px) {
   .main {
     .container{
       &::after, &::before{

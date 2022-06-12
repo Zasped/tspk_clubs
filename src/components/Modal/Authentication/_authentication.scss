@@ -29,6 +29,7 @@
       .img {
         box-shadow: var(--shadow);
         background-color: var(--background);
+        border: 1px solid var(--border);
 
         img {
           width: 100%;
@@ -36,8 +37,10 @@
       }
 
       .quote__text {
+        padding: 0 32px;
         p {
           margin-bottom: 16px;
+          @include text400($size: var(--size-text-18px), $color: var(--text-gray));
         }
 
         small {

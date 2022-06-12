@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './_accordionItem.scss';
-import {faAngleDown, faAngleUp, faCalendarDays} from "@fortawesome/free-solid-svg-icons";
+import {faAngleDown, faAngleUp} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const AccordionItem = ({data, active, onClick}) => {
@@ -13,10 +13,10 @@ const AccordionItem = ({data, active, onClick}) => {
                     <span>{data.title}</span>
                 </div>
                 <div className="angle">
-                    <FontAwesomeIcon icon={(active) ? faAngleUp : faAngleDown} size={"2x"} className={'icon'} color={'#fff'}/>
+                    <FontAwesomeIcon icon={faAngleDown} size={"2x"} className={(active) ? 'icon' : 'icon active'} color={'#fff'}/>
                 </div>
             </div>
-            <div className={"accordion__item__body"}>
+            <div className={!(active) ? "accordion__item__body" : 'accordion__item__body active'}>
                 <span className={active}>{data.body}</span>
             </div>
         </div>

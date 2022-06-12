@@ -9,8 +9,15 @@ import discord from "../../assets/images/discord.svg";
 import vk from "../../assets/images/vk.svg";
 import telegram from "../../assets/images/telegram.svg";
 import Subtitle from "../../components/UI/Subtitle/Subtitle";
+import MenuLinks from "../../components/MenuLinks/MenuLinks";
+import {faHighlighter, faPerson, faPersonDress} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 const ProfilePage = () => {
+
+    const sex = true;
+
     return (
         <MainLayout>
             <div className="flex profilePage_flex">
@@ -21,7 +28,8 @@ const ProfilePage = () => {
 
                     <div className="basic-info">
                         <div className="avatar">
-                            <img src={avatar} className={'image'}/>
+                            {/*<img src={avatar} className={'image'}/>*/}
+                            <FontAwesomeIcon icon={(sex) ? faPerson : faPersonDress} className={'image'} color={'#fff'}/>
                         </div>
 
                         <RowList
@@ -59,9 +67,9 @@ const ProfilePage = () => {
                             title={'Безопасность'}
                             data={[
                                 {name: 'Пароль', body: 'Изменён 05.06.2022'},
-                                {name: 'Почта', body: 'asu*********crum@gmail.com'},
+                                {name: 'Почта', body: 'asu***crum@gmail.com'},
                                 {name: 'Дата последнего входа', body: '05.06.2022'},
-                                {name: 'Подтверждение почты', body: 'не подтверждено'}
+                                {name: 'Подтверждение почты', body: 'не подтверждена'}
                             ]}
                         />
                     </div>
@@ -76,7 +84,7 @@ const ProfilePage = () => {
                     </div>
                 </div>
                 <div className="column profilePage_column">
-
+                    <MenuLinks icon={faHighlighter} text={'Ярмарка мастеров (В разработке)'} style={{boxShadow: 'none'}}/>
                 </div>
             </div>
         </MainLayout>

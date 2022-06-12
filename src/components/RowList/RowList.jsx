@@ -7,18 +7,17 @@ const RowList = ({title, data}) => {
     return (
         <div>
             <Title title={title}/>
-            <div className="row__list">
-                <div className="row__list__column">
-                    {data.map(el =>
-                        <p className={'fieldName'}>{el.name}</p>
-                    )}
-                </div>
-                <div className="row__list__column">
-                    {data.map(el =>
-                        <p className={'fieldText'}>{el.body}</p>
-                    )}
-                </div>
-            </div>
+            <table className="row__list">
+                <tbody>
+                {data.map((el, index) =>
+                    <tr className={'row__item'} key={index}>
+                        <td className={'fieldName'}>{el.name}</td>
+                        <td>/</td>
+                        <td className={'fieldText'}>{el.body}</td>
+                    </tr>
+                )}
+                </tbody>
+            </table>
         </div>
     );
 };

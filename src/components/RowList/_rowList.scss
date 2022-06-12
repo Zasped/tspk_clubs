@@ -1,19 +1,21 @@
 .row__list {
-  display: flex;
 
-  .row__list__column {
+  .row__item {
     .fieldName {
-      padding: 4px 0 4px 16px;
+      padding: 4px 16px;
     }
 
     .fieldText {
       padding: 4px 16px;
-
-      &::before {
-        content: '/';
-        margin-right: 16px;
-      }
     }
 
   }
+}
+
+@media (max-width: 413px) {
+
+  .fieldName, .fieldText {
+    word-break: break-word;
+  }
+
 }

@@ -31,7 +31,7 @@
 
       .title {
 
-        @include text700($size: var(--size-text-24px), $color: var(--text-white));
+        @include text700($size: var(--size-text-24px), $color: var(--white));
         gap: 16px;
         text-shadow: var(--shadow);
       }

@@ -8,6 +8,7 @@
     box-shadow: var(--shadow);
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     .title {
       display: flex;
@@ -21,22 +22,32 @@
       }
 
       span {
-        @include text400($color: var(--text-white));
+        @include text400($color: var(--white));
+      }
+    }
+
+    .angle{
+      .icon{
+        transition: .2s ease-in-out;
+        &.active{
+          transform: rotate(180deg);
+        }
       }
     }
   }
 
   &__body {
     overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-in-out;
+    &.active{
+      transition: max-height .2s ease-in-out .1s;
+      max-height: 300px;
+    }
 
     span {
       display: block;
-      height: 0;
-
-      &.active {
-        padding: 8px 16px;
-        height: fit-content;
-      }
+      padding: 8px 16px;
     }
   }
 }

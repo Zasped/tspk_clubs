@@ -14,12 +14,12 @@ function TimetableElement({groupId, timesPos, position, startTime, endTime, less
       </div>
       <div
         className="lesson"
-        onDragStart={e => dragStartHandler(e, {position, teacher, cabinet, lesson})}
-        onDragLeave={e => dragLeaveHandler(e)}
-        onDragEnd={e => dragEndHandler(e)}
-        onDragOver={e => dragOverHandler(e)}
-        onDrop={e => dropHandler(e, {position, teacher, cabinet, lesson}, groupId)}
-        draggable={true}
+        // onDragStart={e => dragStartHandler(e, {position, teacher, cabinet, lesson})}
+        // onDragLeave={e => dragLeaveHandler(e)}
+        // onDragEnd={e => dragEndHandler(e)}
+        // onDragOver={e => dragOverHandler(e)}
+        // onDrop={e => dropHandler(e, {position, teacher, cabinet, lesson}, groupId)}
+        // draggable={true}
       >
         <span>{lesson}</span>
         <span>{teacher} {cabinet}</span>

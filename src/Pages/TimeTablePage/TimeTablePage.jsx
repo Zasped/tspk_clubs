@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './_timeTablePage.scss';
 import Title from "../../components/UI/Title/Title";
 import Subtitle from "../../components/UI/Subtitle/Subtitle";
-import GroupTimeTable from "../../components/groupTimeTable/groupTimeTable";
+import GroupTimeTable from "../../components/GroupTimeTable/GroupTimeTable";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/Button";
 import a from '../../json/message.json';

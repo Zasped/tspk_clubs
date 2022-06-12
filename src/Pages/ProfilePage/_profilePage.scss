@@ -1,10 +1,18 @@
 @import "src/assets/style/mixins";
 
 .profilePage_flex {
+  flex-wrap: wrap;
+
   .profilePage_column {
+    flex-wrap: wrap;
     justify-content: flex-start;
     padding: 16px 8px;
     gap: 32px;
+
+    &:last-child {
+      align-items: center;
+      justify-content: center;
+    }
 
     .page-title {
       padding: 16px 8px;
@@ -12,37 +20,85 @@
       box-shadow: var(--shadow);
 
       .title {
-        color: var(--text-white);
+        color: var(--white);
       }
     }
 
     .basic-info {
       display: flex;
+      flex-wrap: wrap;
       gap: 32px;
 
       .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 126px;
+        height: 126px;
+        background-color: var(--main-color);
+        box-shadow: var(--shadow);
+
         .image {
-          box-shadow: var(--shadow);
-          width: 126px;
-          height: 126px;
+          width: 80px;
+          height: 80px;
           object-fit: cover;
         }
       }
     }
 
-    .background-info{
+    .background-info {
       display: flex;
-      & > *{
+
+      & > * {
         flex: 1 1 50%;
       }
     }
 
-    .socials{
-      .links__list{
+    .socials {
+      .links__list {
         display: flex;
         gap: 16px;
         padding: 16px;
       }
     }
   }
+}
+
+@media (max-width: 626px) {
+
+  .profilePage_flex {
+    .profilePage_column {
+      .background-info {
+        flex-wrap: wrap;
+        gap: 32px;
+      }
+
+      .socials {
+        .links__list {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 585px) {
+
+  .profilePage_flex {
+    .profilePage_column {
+      .basic-info {
+
+        .avatar {
+
+          .image {
+
+          }
+
+        }
+      }
+    }
+  }
+
 }

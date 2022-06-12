@@ -34,6 +34,7 @@
 
       .selected__date{
         margin-bottom: 16px;
+        @include text400($size: var(--size-text-16px), $color: var(--text-gray));
       }
 
       .groupTimeTable {

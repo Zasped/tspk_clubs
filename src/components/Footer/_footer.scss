@@ -1,12 +1,33 @@
-.footer{
+@import "src/assets/style/mixins";
+
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 48px;
-  .container{
-    .flex{
+
+  .container {
+    .flex {
       justify-content: space-between;
       color: var(--text-gray);
+
+      small{
+        @include text400($size: --size-text-14px, $color: var(--text-gray));
+      }
     }
   }
+}
+
+@media (max-width: 555px) {
+
+  .footer {
+    .container {
+      .flex {
+        small:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
 }

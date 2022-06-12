@@ -1,8 +1,7 @@
 import React from 'react';
 import './_mainPage.scss';
-import hive from "../../assets/images/romb.svg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCalendarDays, faCubesStacked, faInfo} from "@fortawesome/free-solid-svg-icons";
+import {faCalendarDays, faCubesStacked, faHighlighter, faInfo} from "@fortawesome/free-solid-svg-icons";
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import Accordion from "../../components/Accordion/Accordion";
 import Title from "../../components/UI/Title/Title";
@@ -10,9 +9,11 @@ import Subtitle from "../../components/UI/Subtitle/Subtitle";
 import akame from "../../assets/images/akamepng.png";
 import ashuramaru from "../../assets/images/ashuramaru.png";
 import telka from "../../assets/images/telka.png";
+import {Link} from "react-router-dom";
 
 
 const MainPage = () => {
+
     return (
         <MainLayout>
             <div className="flex mainPage_flex">
@@ -24,7 +25,8 @@ const MainPage = () => {
                     <div className="subtitle">
                         <div className="subtitle__item">
                             <Subtitle>
-                                Просто скринсейвер, проект разработанный для удобного взаимодействия клубов и учеников, а
+                                Просто скринсейвер, проект разработанный для удобного взаимодействия клубов и учеников,
+                                а
                                 так же разработаны интерфейсы для более удобного взаимодействия с некоторыми задачами.
                             </Subtitle>
                         </div>
@@ -36,11 +38,24 @@ const MainPage = () => {
                         <div className="fast__nav__item">
                             <h1 className={'fast__nav__item__title'}>Быстрая навигация</h1>
                             <div className={"images"}>
-                                <div className="images__item"><FontAwesomeIcon icon={faCubesStacked} size={"1x"}
-                                                                               className={'icon'} color={'#fff'}/></div>
-                                <div className="images__item"><FontAwesomeIcon icon={faCalendarDays} size={'1x'}
-                                                                               className={'icon'} color={'#fff'}/></div>
-                                <div className="images__item"><img src={hive} alt="" className={'icon'}/></div>
+                                <Link to={'/clubs'}>
+                                    <div className="images__item">
+                                        <FontAwesomeIcon icon={faCubesStacked} size={"1x"} className={'icon'}
+                                                         color={'#fff'}/>
+                                    </div>
+                                </Link>
+                                <Link to={'/timetable'}>
+                                    <div className="images__item">
+                                        <FontAwesomeIcon icon={faCalendarDays} size={'1x'} className={'icon'}
+                                                         color={'#fff'}/>
+                                    </div>
+                                </Link>
+                                <Link to={'#'}>
+                                    <div className="images__item">
+                                        <FontAwesomeIcon icon={faHighlighter} size={'1x'} className={'icon'}
+                                                         color={'#fff'}/>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                         <div className="fast__nav__item">
