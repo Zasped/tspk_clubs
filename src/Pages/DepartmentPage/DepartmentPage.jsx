@@ -77,7 +77,7 @@ const DepartmentPage = () => {
                             {department.map((el, index)=>
                                 <Link to={`${index+1}`} key={index}>
                                     <li className="navigate__list__item">
-                                        <img src={chel} className={'image'}/>
+                                        <img src={el.image} className={'image'}/>
                                         <div className="text">
                                             <div className="text__name">
                                                 {el.name}

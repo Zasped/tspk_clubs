@@ -12,14 +12,14 @@ const Calendar = () => {
     const days = []
 
     for (let i = 0; i < new Date(date.getFullYear(), date.getMonth(), 0).getDay(); i++) {
-        days.push(<div className="day__item"/>);
+        days.push(<div className="day__item" key={i+100}/>);
     }
 
     for (let i = 0; i < new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(); i++) {
         if (i === date.getDate()-1) {
-            days.push(<div className="day__item current">{i+1}</div>);
+            days.push(<div className="day__item current" key={i}>{i+1}</div>);
         } else {
-            days.push(<div className="day__item">{i+1}</div>);
+            days.push(<div className="day__item" key={i}>{i+1}</div>);
         }
     }
 

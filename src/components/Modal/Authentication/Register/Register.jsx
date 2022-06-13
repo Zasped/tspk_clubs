@@ -59,8 +59,6 @@ const Register = ({registerVisible, setRegisterVisible, setAuthVisible}) => {
 
     const getGroup = () => group ? selectOptions.find(g => g.value === group) : '';
 
-    const select = useRef();
-    console.log(select.current)
     return (
         <ModalLayout setVisible={setRegisterVisible} visible={registerVisible}>
             <div className="head">
@@ -93,7 +91,6 @@ const Register = ({registerVisible, setRegisterVisible, setAuthVisible}) => {
                             classNamePrefix={'select'}
                             maxMenuHeight={150}
                             blurInputOnSelect
-                            ref={select}
                         />
 
                         <Input type={'password'} placeholder={'Пароль'} value={password}
