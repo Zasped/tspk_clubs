@@ -2,15 +2,57 @@ import React, {useState} from 'react';
 import './_departmentPage.scss';
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import Title from "../../components/UI/Title/Title";
-import {Outlet} from "react-router-dom";
+import {Link, Outlet, useParams} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
 import ModalLayout from "../../layout/ModalLayout/ModalLayout";
 import chel from "../../assets/images/chel.png";
+import ataman from "../../assets/images/ataman.png";
+import kondurarM from "../../assets/images/kondurarM.jpg";
+import kondurarN from "../../assets/images/kondurarN.jpg";
+import sharov from "../../assets/images/sharov.jpg";
+import lanchikov from "../../assets/images/lanchikov.jpg";
+import romanova from "../../assets/images/romanova.jpg";
+
 
 const DepartmentPage = () => {
 
     const [departmentListVisible, setDepartmentListVisible] = useState(false);
+
+    const {id} = useParams();
+
+    const [department, setDepartment] = useState([
+        {
+            name: 'Шаров Сергей Александрович',
+            description: 'Преподаватель спец. дисциплин на специальности «информационные системы и программирование». Сертифицированный эксперт wsr по компетенции "веб-дизайн и разработка"',
+            image: sharov
+        },
+        {
+            name: 'Атаманюк Викентий Евгеньевич',
+            description: 'Преподаватель спец. дисциплин на специальности «информационные системы и программирование». Эксперт wsr по компетенции «Программные решения для бизнеса»',
+            image: ataman
+        },
+        {
+            name: 'Ланчиков Максим Николаевич',
+            description: 'Зам.директора по IT. Преподаватель спец. дисциплин на специальности «информационные системы и комплексы».',
+            image: lanchikov
+        },
+        {
+            name: 'Кондурар Наталья Николаевна',
+            description: 'Преподаватель спец. дисциплин на отделении IT. Эксперт wsr по компетенции «Разработка решений с использованием блокчейн-технологий».',
+            image: kondurarN
+        },
+        {
+            name: 'Кондурар Марина Викторовна',
+            description: 'Преподаватель спецдисциплин на отделении IT. эксперт wsr по компетенции «машинное обучение и большие данные». Кандидат педагогических наук',
+            image: kondurarM
+        },
+        {
+            name: 'Романова Татьяна Николаевна',
+            description: 'Преподаватель спец. дисциплин на отделении IT. Эксперт wsr по компетенции «Разработка виртуальной и дополненной реальности».',
+            image: romanova
+        }
+    ]);
 
     return (
         <MainLayout>
@@ -26,67 +68,24 @@ const DepartmentPage = () => {
                         </div>
                     </div>
 
-                    <Outlet/>
+                    <Outlet context={department[id-1]} />
 
                 </div>
                 <div className="column departmentPage_column">
                     <div className="navigate">
                         <ul className="navigate__list">
-                            <li className="navigate__list__item">
-                                <img src={chel} alt="" className={'image'}/>
-                                <div className="text">
-                                    <div className="text__name">
-                                        Николаев Фёдор Макарович
-                                    </div>
-                                    <div className="text__year">
-                                        2019 - 2023
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="navigate__list__item">
-                                <img src={chel} alt="" className={'image'}/>
-                                <div className="text">
-                                    <div className="text__name">
-                                        Николаев Фёдор Макарович
-                                    </div>
-                                    <div className="text__year">
-                                        2019 - 2023
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="navigate__list__item">
-                                <img src={chel} alt="" className={'image'}/>
-                                <div className="text">
-                                    <div className="text__name">
-                                        Николаев Фёдор Макарович
-                                    </div>
-                                    <div className="text__year">
-                                        2019 - 2023
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="navigate__list__item">
-                                <img src={chel} alt="" className={'image'}/>
-                                <div className="text">
-                                    <div className="text__name">
-                                        Николаев Фёдор Макарович
-                                    </div>
-                                    <div className="text__year">
-                                        2019 - 2023
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="navigate__list__item">
-                                <img src={chel} alt="" className={'image'}/>
-                                <div className="text">
-                                    <div className="text__name">
-                                        Николаев Фёдор Макарович
-                                    </div>
-                                    <div className="text__year">
-                                        2019 - 2023
-                                    </div>
-                                </div>
-                            </li>
+                            {department.map((el, index)=>
+                                <Link to={`${index+1}`} key={index}>
+                                    <li className="navigate__list__item">
+                                        <img src={chel} className={'image'}/>
+                                        <div className="text">
+                                            <div className="text__name">
+                                                {el.name}
+                                            </div>
+                                        </div>
+                                    </li>
+                                </Link>
+                            )}
                         </ul>
                     </div>
                 </div>
@@ -100,61 +99,18 @@ const DepartmentPage = () => {
                 </div>
                 <div className="navigate">
                     <ul className="navigate__list">
-                        <li className="navigate__list__item">
-                            <img src={chel} alt="" className={'image'}/>
-                            <div className="text">
-                                <div className="text__name">
-                                    Николаев Фёдор Макарович
-                                </div>
-                                <div className="text__year">
-                                    2019 - 2023
-                                </div>
-                            </div>
-                        </li>
-                        <li className="navigate__list__item">
-                            <img src={chel} alt="" className={'image'}/>
-                            <div className="text">
-                                <div className="text__name">
-                                    Николаев Фёдор Макарович
-                                </div>
-                                <div className="text__year">
-                                    2019 - 2023
-                                </div>
-                            </div>
-                        </li>
-                        <li className="navigate__list__item">
-                            <img src={chel} alt="" className={'image'}/>
-                            <div className="text">
-                                <div className="text__name">
-                                    Николаев Фёдор Макарович
-                                </div>
-                                <div className="text__year">
-                                    2019 - 2023
-                                </div>
-                            </div>
-                        </li>
-                        <li className="navigate__list__item">
-                            <img src={chel} alt="" className={'image'}/>
-                            <div className="text">
-                                <div className="text__name">
-                                    Николаев Фёдор Макарович
-                                </div>
-                                <div className="text__year">
-                                    2019 - 2023
-                                </div>
-                            </div>
-                        </li>
-                        <li className="navigate__list__item">
-                            <img src={chel} alt="" className={'image'}/>
-                            <div className="text">
-                                <div className="text__name">
-                                    Николаев Фёдор Макарович
-                                </div>
-                                <div className="text__year">
-                                    2019 - 2023
-                                </div>
-                            </div>
-                        </li>
+                        {department.map((el, index)=>
+                            <Link to={`${index+1}`} key={index} onClick={e => setDepartmentListVisible(false)}>
+                                <li className="navigate__list__item">
+                                    <img src={chel} className={'image'}/>
+                                    <div className="text">
+                                        <div className="text__name">
+                                            {el.name}
+                                        </div>
+                                    </div>
+                                </li>
+                            </Link>
+                        )}
                     </ul>
                 </div>
             </ModalLayout>

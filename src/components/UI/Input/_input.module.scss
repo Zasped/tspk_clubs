@@ -8,7 +8,7 @@ span{
     border: none;
     border-bottom: 1px solid var(--border);
     padding: 14.5px 8px;
-    @include text400($color: var(--text-light-gray));
+    @include text400($color: var(--text-gray));
     transition: .1s ease-in-out;
     outline: none;
 

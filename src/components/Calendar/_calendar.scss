@@ -1,0 +1,78 @@
+@import "src/assets/style/mixins";
+
+.calendar-container {
+  max-width: 224px;
+  margin: 0 auto;
+  .title-cldr {
+    padding: 8px;
+    background-color: var(--main-color);
+    box-shadow: var(--shadow);
+    margin-bottom: 8px;
+
+    &__top {
+      display: flex;
+      gap: 8px;
+
+      .month {
+        @include text400($size: var(--size-text-16px), $color: var(--white));
+      }
+
+      .year {
+        @include text400($size: var(--size-text-16px), $color: var(--white));
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      gap: 8px;
+
+      .day-of-week {
+        @include text400($size: var(--size-text-14px), $color: var(--white));
+      }
+
+      .current-day {
+        @include text400($size: var(--size-text-14px), $color: var(--white));
+      }
+    }
+  }
+
+  .body-cldr {
+    max-height: 224px;
+    overflow: auto;
+    &__head {
+      @include text700($size: var(--size-text-14px), $color: var(--text));
+      .days-of-week__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .days-of-week__item {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    &__body{
+      @include text400($size: var(--size-text-14px), $color: var(--text));
+      .day__list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .day__item{
+          width: 32px;
+          height: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.current{
+            background-color: var(--main-color);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}

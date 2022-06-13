@@ -22,7 +22,7 @@
       }
 
       span {
-        @include text400($color: var(--white));
+        @include text700($size: var(--size-text-18px), $color: var(--white));
       }
     }
 

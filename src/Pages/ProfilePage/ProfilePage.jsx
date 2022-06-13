@@ -10,7 +10,7 @@ import vk from "../../assets/images/vk.svg";
 import telegram from "../../assets/images/telegram.svg";
 import Subtitle from "../../components/UI/Subtitle/Subtitle";
 import MenuLinks from "../../components/MenuLinks/MenuLinks";
-import {faHighlighter, faPerson, faPersonDress} from "@fortawesome/free-solid-svg-icons";
+import {faHighlighter, faPerson, faPersonDress, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
@@ -80,6 +80,9 @@ const ProfilePage = () => {
                             <Social icon={discord} link={'#'}/>
                             <Social icon={vk} link={'#'}/>
                             <Social icon={telegram} link={'#'}/>
+                            <div className={'add-social'}>
+                                <FontAwesomeIcon icon={faPlus} className={'icon'}/>
+                            </div>
                         </Subtitle>
                     </div>
                 </div>

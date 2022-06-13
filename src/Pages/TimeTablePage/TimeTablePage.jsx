@@ -8,6 +8,7 @@ import Button from "../../components/UI/Button/Button";
 import a from '../../json/message.json';
 import TimetableGroup from "../../components/Timetable/TimetableGroup";
 import TimetableStore from "../../store/Timetable/Timetable.store";
+import Calendar from "../../components/Calendar/Calendar";
 
 const TimeTablePage = () => {
 
@@ -27,7 +28,7 @@ const TimeTablePage = () => {
                         </Subtitle>
                     </div>
                     <div className="cldr">
-                        Календарь
+                        <Calendar/>
                     </div>
                 </div>
                 <div className="wrapper__column right">

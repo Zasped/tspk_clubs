@@ -12,7 +12,7 @@ const RowList = ({title, data}) => {
                 {data.map((el, index) =>
                     <tr className={'row__item'} key={index}>
                         <td className={'fieldName'}>{el.name}</td>
-                        <td>/</td>
+                        <td className={'slash'}>/</td>
                         <td className={'fieldText'}>{el.body}</td>
                     </tr>
                 )}

@@ -22,72 +22,118 @@ const ClubPage = () => {
     const {id: idClub} = useParams();
     const [clubs, setClubs] = useState([
         {
-            name: 'Blockchain',
+            name: 'Блокчейн',
             icon: faCircleDollarToSlot,
             description: '1Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Печерский Денис'],
+            tutor: ['Кондурар Н.Н.']
         },
         {
-            name: 'Blockchain',
+            name: 'Графический Дизайн (Photoshop)',
             icon: faCoins,
             description: '2Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Воронин Даня'],
+            tutor: ['Кондурар М.В.']
         },
         {
-            name: 'Blockchain',
+            name: 'Графический Дизайн (Photoshop)',
             icon: faCoins,
             description: '3Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Медведев Дмитрий'],
+            tutor: ['Кондурар М.В.']
         },
         {
-            name: 'Blockchain',
+            name: 'Верстальщики',
             icon: faCoins,
             description: '4Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Гаврилов Вячеслав'],
+            tutor: ['Шаров С.А.']
         },
         {
-            name: 'Blockchain',
+            name: 'Веб-разработка',
             icon: faCoins,
             description: '5Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Карабаев Нуриддин'],
+            tutor: ['Шаров С.А.']
         },
         {
-            name: 'Blockchain',
+            name: 'Видеомонтаж',
             icon: faCoins,
             description: '6Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Проскуряков Данил'],
+            tutor: ['Тарасова В.В.']
         },
         {
-            name: 'Blockchain',
+            name: 'Мобильная разработка',
             icon: faCoins,
             description: '7Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Церковнов Александр', 'Бусаров Анатолий'],
+            tutor: ['Кондурар Н.Н.']
         },
         {
-            name: 'Blockchain',
+            name: 'Разработка игр',
             icon: faCoins,
             description: '8Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Акулов Илья'],
+            tutor: ['Атаманюк В.Е.']
         },
         {
-            name: 'Blockchain',
+            name: 'Художники',
             icon: faCoins,
             description: '9Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Кранин Ярослав'],
+            tutor: ['Городкова С.А.']
         },
         {
-            name: 'Blockchain',
+            name: '3D',
             icon: faCoins,
             description: '10Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Фролов Дмитрий'],
+            tutor: ['Городкова С.А.']
         },
         {
-            name: 'Blockchain',
+            name: 'VR',
             icon: faCoins,
             description: '11Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Акулов Илья', 'Фролов Дмитрий'],
+            tutor: ['Романова Т.Н.']
         },
         {
-            name: 'Blockchain',
+            name: 'AR',
             icon: faCoins,
             description: '12Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Дурбажев Владимир'],
+            tutor: ['Романова Т.Н.']
         },
         {
-            name: 'Blockchain',
+            name: 'Саморазвитие',
             icon: faCoins,
             description: '13Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
-        }
+            leader: ['Дурбажев Владимир'],
+            tutor: ['']
+        },
+        {
+            name: 'Маркетинг',
+            icon: faCoins,
+            description: '13Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Сулимов Данил', 'Агрофенин Роман'],
+            tutor: ['Романова Т.Н.']
+        },
+        {
+            name: 'Машинное обучение',
+            icon: faCoins,
+            description: '13Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Кондурар М.В.'],
+            tutor: ['Кондурар М.В.']
+        },
+        {
+            name: 'Разработка игр',
+            icon: faCoins,
+            description: '13Откройте новое направление в бизнесе вместе с Битрикс24. Зарабатывайте до 50% с продажи Битрикс24 и 100% с внедрения. Подайте заявку на сайте, расскажем все подробности голосом.',
+            leader: ['Половинкин Максим'],
+            tutor: ['Кондурар Н.Н.']
+        },
     ]);
-
 
     return (
         <MainLayout>
@@ -125,21 +171,45 @@ const ClubPage = () => {
                             </div>
                         </div>
                         <ul className="club__list">
-                            {clubs.map((el, index) => {
-                                return (index == idClub - 1) ?
-                                    null :
-                                    <NavLink to={`${index + 1}`} key={index}
-                                             className={({isActive}) => (isActive) ? "active" : null}>
-                                        <li className={"club__list__item"}>
-                                            <div className="club__list__item__image">
-                                                <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
-                                            </div>
-                                            <div className="club__list__item__name">
-                                                {el.name}
-                                            </div>
-                                        </li>
-                                    </NavLink>;
-                            })}
+                            <div className="club__list__column">
+                                {clubs.map((el, index) =>
+
+                                    (index == idClub - 1) ?
+                                        null
+                                        : (index % 2 === 0) ?
+                                            null
+                                            : <NavLink to={`${index + 1}`} key={index}
+                                                       className={({isActive}) => (isActive) ? "active" : null}>
+                                                <li className={"club__list__item"}>
+                                                    <div className="club__list__item__image">
+                                                        <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
+                                                    </div>
+                                                    <div className="club__list__item__name">
+                                                        {el.name}
+                                                    </div>
+                                                </li>
+                                            </NavLink>
+                                )}
+                            </div>
+                            <div className="club__list__column">
+                                {clubs.map((el, index) =>
+
+                                    (index == idClub - 1) ?
+                                        null
+                                        : (index % 2 === 0) ?
+                                            <NavLink to={`${index + 1}`} key={index} className={({isActive}) => (isActive) ? "active" : null} style={{width: "fit-content"}}>
+                                                <li className={"club__list__item"}>
+                                                    <div className="club__list__item__image">
+                                                        <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
+                                                    </div>
+                                                    <div className="club__list__item__name">
+                                                        {el.name}
+                                                    </div>
+                                                </li>
+                                            </NavLink>
+                                            : null
+                                )}
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -152,18 +222,45 @@ const ClubPage = () => {
                     </div>
                 </div>
                 <ul className="club__list">
-                    {clubs.map((el, index) =>
-                        <NavLink to={`${index + 1}`} key={index} onClick={e => setClubsListVisible(false)}>
-                            <li className="club__list__item">
-                                <div className="club__list__item__image">
-                                    <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
-                                </div>
-                                <div className="club__list__item__name">
-                                    {el.name}
-                                </div>
-                            </li>
-                        </NavLink>
-                    )}
+                    <div className="club__list__column">
+                        {clubs.map((el, index) =>
+
+                            (index == idClub - 1) ?
+                                null
+                                : (index % 2 === 0) ?
+                                null
+                                : <NavLink to={`${index + 1}`} key={index}
+                                           className={({isActive}) => (isActive) ? "active" : null}>
+                                    <li className={"club__list__item"}>
+                                        <div className="club__list__item__image">
+                                            <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
+                                        </div>
+                                        <div className="club__list__item__name">
+                                            {el.name}
+                                        </div>
+                                    </li>
+                                </NavLink>
+                        )}
+                    </div>
+                    <div className="club__list__column">
+                        {clubs.map((el, index) =>
+
+                            (index == idClub - 1) ?
+                                null
+                                : (index % 2 === 0) ?
+                                <NavLink to={`${index + 1}`} key={index} className={({isActive}) => (isActive) ? "active" : null} style={{width: "fit-content"}}>
+                                    <li className={"club__list__item"}>
+                                        <div className="club__list__item__image">
+                                            <FontAwesomeIcon icon={el.icon} color={'#fff'} className={'icon'}/>
+                                        </div>
+                                        <div className="club__list__item__name">
+                                            {el.name}
+                                        </div>
+                                    </li>
+                                </NavLink>
+                                : null
+                        )}
+                    </div>
                 </ul>
             </ModalLayout>
         </MainLayout>

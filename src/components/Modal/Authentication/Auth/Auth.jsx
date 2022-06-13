@@ -44,7 +44,7 @@ const Auth = ({authVisible, setAuthVisible, setRegisterVisible}) => {
                             <img src={imgQuote} alt="imgQuote"/>
                         </div>
                         <div className="quote__text">
-                            <p>“Все, что делаешь, надо делать хорошо, даже если совершаешь безумство.”</p>
+                            <p>Все, что делаешь, надо делать хорошо, даже если совершаешь безумство.</p>
                             <small>Оноре де Бальзак</small>
                         </div>
                     </div>

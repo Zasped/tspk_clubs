@@ -26,15 +26,20 @@ const ClubId = () => {
                         <div className="info__leaders">
                             <div className="leader">
                                 <Title title={'Ведущий'}/>
-                                <Subtitle classNames={['name']}>
-                                    asuramesocrum
-                                </Subtitle>
+                                {infoClub.leader.map(el =>
+                                    <Subtitle classNames={['name']}>
+                                        {el}
+                                    </Subtitle>
+                                )}
+
                             </div>
                             <div className="tutor">
                                 <Title title={'Куратор'}/>
-                                <Subtitle classNames={['name']}>
-                                    asuramesocrum
-                                </Subtitle>
+                                {infoClub.tutor.map(el =>
+                                    <Subtitle classNames={['name']}>
+                                        {el}
+                                    </Subtitle>
+                                )}
                             </div>
                         </div>
                     </div>

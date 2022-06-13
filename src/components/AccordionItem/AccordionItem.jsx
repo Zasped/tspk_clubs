@@ -1,6 +1,6 @@
 import React from 'react';
 import './_accordionItem.scss';
-import {faAngleDown, faAngleUp} from "@fortawesome/free-solid-svg-icons";
+import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const AccordionItem = ({data, active, onClick}) => {

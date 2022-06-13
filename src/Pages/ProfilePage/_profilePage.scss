@@ -59,6 +59,20 @@
         display: flex;
         gap: 16px;
         padding: 16px;
+        flex-wrap: wrap;
+
+        .add-social {
+          background-color: var(--line);
+          box-shadow: var(--shadow);
+          cursor: pointer;
+          padding: 16px;
+
+          .icon {
+            width: 32px;
+            height: 32px;
+            filter: drop-shadow(var(--shadow));
+          }
+        }
       }
     }
   }

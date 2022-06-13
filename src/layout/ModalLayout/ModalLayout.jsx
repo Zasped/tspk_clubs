@@ -5,7 +5,7 @@ import {CSSTransition} from "react-transition-group";
 const ModalLayout = ({children, setVisible, visible}) => {
 
     return (
-        <CSSTransition in={visible} classNames='modal_anim' timeout={300} mountOnEnter unmountOnExit>
+        <CSSTransition in={visible} classNames='modal_anim' timeout={200} mountOnEnter unmountOnExit>
             <div className={(visible) ? 'modal active' : 'modal'} onClick={() => setVisible(visible => !visible)}>
                 <div className={'modal__content'} onClick={e => e.stopPropagation()}>
                     {children}

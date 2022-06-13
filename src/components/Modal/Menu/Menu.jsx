@@ -28,7 +28,7 @@ const Menu = ({visible, setMenuVisible}) => {
                             MENU
                         </h1>
                         <div className="close" onClick={closeModal}>
-                            <FontAwesomeIcon icon={faXmark} size={'2x'} color={'var(--background)'}/>
+                            <FontAwesomeIcon icon={faXmark} size={'2x'} color={'var(--white)'}/>
                         </div>
                     </div>
                     <div className="flex">

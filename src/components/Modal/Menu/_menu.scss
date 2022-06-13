@@ -6,14 +6,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
   z-index: 5;
+  pointer-events: none;
 
   &.active{
-    display: flex;
+    pointer-events: all;
   }
 
   &__content {
@@ -58,6 +59,24 @@
     }
 
   }
+}
+
+.modal_anim-enter {
+  opacity: 0;
+}
+
+.modal_anim-enter-active {
+  opacity: 1;
+  transition: opacity 200ms, transform 200ms;
+}
+
+.modal_anim-exit {
+  opacity: 1;
+}
+
+.modal_anim-exit-active {
+  opacity: 0;
+  transition: opacity 200ms, transform 200ms;
 }
 
 @media (max-width: 1200px) {

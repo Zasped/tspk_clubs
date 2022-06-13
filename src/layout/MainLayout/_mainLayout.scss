@@ -7,33 +7,7 @@
       writing-mode: vertical-lr;
       text-align: center;
       background-color: white;
-      &.left{
-        position: relative;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        &::after{
-          content: '';
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          left: 50%;
-          display: block;
-          height: 100%;
-          width: 2px;
-          background-color: var(--line);
-        }
-
-        span{
-          background-color: white;
-          position: relative;
-          z-index: 2;
-          display: block;
-          height: 300px;
-        }
-      }
-
-      &.right{
+      &.left, &.right{
         position: relative;
         z-index: 2;
         display: flex;
@@ -89,8 +63,8 @@
 @media (max-width: 455px) {
   .main {
     .container{
-      &::after, &::before{
-        display: none;
+      .smile{
+        display: none !important;
       }
     }
   }

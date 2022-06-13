@@ -203,18 +203,23 @@
           }
         }
       }
-      .club__list{
+      .club__list {
         display: flex;
-        max-width: 50%;
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 16px;
-        &__item{
+        justify-content: center;
+        &__column {
+          display: flex;
+          flex: 1 1 35%;
+          gap: 16px;
+          flex-direction: column;
+        }
+
+        &__item {
           display: flex;
           align-items: center;
           gap: 8px;
           height: fit-content;
-          &__image{
+
+          &__image {
             width: 64px;
             height: 64px;
             background-color: var(--main-color);
@@ -222,17 +227,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            .icon{
+
+            .icon {
               filter: drop-shadow(var(--shadow));
               width: 34px;
               height: auto;
             }
           }
-          &__name{
+
+          &__name {
             @include text400($size: var(--size-text-16px), $color: var(--text-gray));
             padding: 0 8px;
             flex: 1;
-            max-width: 100px;
           }
         }
       }
@@ -242,35 +248,27 @@
 
 .modal__content{
 
-  .club__list{
+  .club__list {
     display: flex;
-    width: 100%;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
     overflow: auto;
 
-    .active{
-      background-color: var(--main-color);
-
-      .club__list__item{
-        box-shadow: var(--shadow);
-
-        .club__list__item__image{
-          box-shadow: none;
-        }
-        .club__list__item__name{
-          @include text400($size: var(--size-text-16px), $color: var(--white));
-        }
-      }
+    &__column {
+      display: flex;
+      flex: 1 1 35%;
+      gap: 16px;
+      flex-direction: column;
     }
 
-    &__item{
+    &__item {
       display: flex;
       align-items: center;
       gap: 8px;
       height: fit-content;
 
-      &__image{
+      &__image {
         width: 64px;
         height: 64px;
         background-color: var(--main-color);
@@ -278,13 +276,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .icon{
+
+        .icon {
           filter: drop-shadow(var(--shadow));
           width: 34px;
           height: auto;
         }
       }
-      &__name{
+
+      &__name {
         @include text400($size: var(--size-text-16px), $color: var(--text-gray));
         padding: 0 8px;
         flex: 1;
@@ -300,7 +300,7 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 825px) {
   .clubPage_flex .clubPage_column {
     padding: 0;
 

@@ -43,129 +43,22 @@
   }
 }
 
-//.modal_anim-enter {
-//  opacity: 0;
-//  transform: scale(.9);
-//}
-//
-//.modal_anim-enter-active {
-//  opacity: 1;
-//  transform: translateX(0);
-//  transition: opacity 300ms, transform 300ms;
-//}
-//
-//.modal_anim-exit {
-//  opacity: 1;
-//}
-//
-//.modal_anim-exit-active {
-//  opacity: 0;
-//  transform: scale(1);
-//  transition: opacity 300ms, transform 300ms;
-//}
-
-
-.modal {
-  transform: scale(1);
-  background: rgba(0, 0, 0, .0);
-  animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-  .modal__content {
-    background-color: transparent;
-    animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-    > * {
-      opacity: 0;
-      position: relative;
-      animation: modalContentFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-    }
-
-    .modal-svg {
-      rect {
-        animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-      }
-    }
-  }
-
-  &.out {
-    animation: quickScaleDown 0s .5s linear forwards;
-
-    .modal {
-      animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-      .modal__content {
-        animation: modalFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-        > * {
-          animation: modalContentFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-        }
-
-        .modal-svg {
-          rect {
-            animation: sketchOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-          }
-        }
-      }
-    }
-  }
-}
-
 .modal_anim-enter {
-
+  opacity: 0;
 }
 
 .modal_anim-enter-active {
-  transform: scale(1);
-
-  .modal {
-    background: rgba(0, 0, 0, .0);
-    animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-    .modal__content {
-      background-color: transparent;
-      animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-      > * {
-        opacity: 0;
-        position: relative;
-        animation: modalContentFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-      }
-
-      .modal-svg {
-        rect {
-          animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-        }
-      }
-    }
-  }
-
+  opacity: 1;
+  transition: opacity 200ms, transform 200ms;
 }
 
 .modal_anim-exit {
-
+  opacity: 1;
 }
 
 .modal_anim-exit-active {
-
-  animation: quickScaleDown 0s .5s linear forwards;
-  .modal {
-    animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-    .modal__content {
-      animation: modalFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-      > * {
-        animation: modalContentFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-      }
-
-      .modal-svg {
-        rect {
-          animation: sketchOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-        }
-      }
-    }
-  }
-
+  opacity: 0;
+  transition: opacity 200ms, transform 200ms;
 }
 
 

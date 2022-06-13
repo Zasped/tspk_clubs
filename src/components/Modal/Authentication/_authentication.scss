@@ -4,7 +4,8 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
-  .close{
+
+  .close {
     cursor: pointer;
   }
 }
@@ -18,6 +19,68 @@
       gap: 16px;
       padding: 0 10%;
       min-height: 70vh;
+
+      .select {
+        &__menu {
+          background-color: white;
+          z-index: 5;
+        }
+
+        &__option {
+          color: var(--text-gray);
+
+          &--is-focused {
+            color: black;
+            background-color: var(var(--line));
+          }
+
+          &--is-selected {
+            color: white;
+            background-color: var(--main-color);
+          }
+        }
+
+        &__control {
+          border: none;
+          border-bottom: 1px solid var(--border);
+          border-radius: 0;
+          height: 50px;
+
+          &--menu-is-open {
+            .select__indicator {
+              transform: rotate(180deg);
+            }
+          }
+
+          &--is-focused {
+            border: none;
+            box-shadow: var(--shadow);
+
+            .select__single-value {
+              color: var(--text-light-gray);
+            }
+          }
+
+          .select__single-value {
+            color: var(--text-gray);
+          }
+
+          .select__indicators {
+            .select__indicator-separator {
+              display: none;
+            }
+
+            .select__indicator {
+              transition: .2s ease-in-out;
+            }
+          }
+        }
+
+        &__placeholder {
+          display: block;
+          color: var(--text-light-gray);
+        }
+      }
     }
 
     > .quote {
@@ -38,9 +101,20 @@
 
       .quote__text {
         padding: 0 32px;
+
         p {
           margin-bottom: 16px;
           @include text400($size: var(--size-text-18px), $color: var(--text-gray));
+
+          &::after {
+            content: '“';
+            color: var(--main-color);
+          }
+
+          &::before {
+            content: '”';
+            color: var(--main-color);
+          }
         }
 
         small {
@@ -56,6 +130,7 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
+      align-items: center;
 
       .btns {
         display: flex;
@@ -65,8 +140,14 @@
       }
 
       p {
-        text-align: center;
-        @include text400($color: var(--text-light-gray));
+        width: fit-content;
+        cursor: pointer;
+        @include text400($size: var(--size-text-16px), $color: var(--text-light-gray));
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          color: var(--text-gray);
+        }
       }
     }
   }
@@ -83,13 +164,13 @@
 }
 
 @media (max-width: 426px) {
-  .flex .column .form{
+  .flex .column .form {
     padding: 16px 5%;
     min-height: 50vh;
     overflow: hidden;
   }
 
-  .modal__content .flex{
+  .modal__content .flex {
     overflow: auto;
   }
 
