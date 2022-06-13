@@ -20,13 +20,14 @@
 
   &__content {
     max-width: 60%;
-    max-height: 98%;
+    max-height: 100%;
     width: 100%;
     display: inline-flex;
     flex-direction: column;
     padding: 32px;
     background-color: var(--white);
     position: relative;
+    border: 1px solid var(--border);
 
     .modal-svg {
       position: absolute !important;
@@ -35,7 +36,7 @@
       pointer-events: none;
       rect {
         stroke: var(--border);
-        stroke-width: 1.5px;
+        stroke-width: 2px;
         stroke-dasharray: 3852;
         stroke-dashoffset: 3852;
       }
@@ -163,7 +164,7 @@
 
 @media (max-width: 1135px) {
   .modal__content {
-    max-width: 90%;
+    max-width: 100%;
     display: flex;
     gap: 20px;
     height: 100%;

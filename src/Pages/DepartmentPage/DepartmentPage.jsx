@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './_departmentPage.scss';
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import Title from "../../components/UI/Title/Title";
-import {Link, Outlet, useParams} from "react-router-dom";
+import {Link, NavLink, Outlet, useParams} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
 import ModalLayout from "../../layout/ModalLayout/ModalLayout";
@@ -56,26 +56,23 @@ const DepartmentPage = () => {
 
     return (
         <MainLayout>
-
             <div className="flex departmentPage_flex">
                 <div className="column departmentPage_column">
                     <div className="title">
-                        <Title title={'Руководящий отделением'}/>
+                        <Title title={'Руководящие отделением'}/>
                     </div>
                     <div className="department__list">
                         <div className="department__list__text" onClick={e => setDepartmentListVisible(true)}>
                             Список руководящих
                         </div>
                     </div>
-
                     <Outlet context={department[id-1]} />
-
                 </div>
                 <div className="column departmentPage_column">
                     <div className="navigate">
                         <ul className="navigate__list">
                             {department.map((el, index)=>
-                                <Link to={`${index+1}`} key={index}>
+                                <NavLink to={`${index+1}`} key={index}>
                                     <li className="navigate__list__item">
                                         <img src={el.image} className={'image'}/>
                                         <div className="text">
@@ -84,13 +81,12 @@ const DepartmentPage = () => {
                                             </div>
                                         </div>
                                     </li>
-                                </Link>
+                                </NavLink>
                             )}
                         </ul>
                     </div>
                 </div>
             </div>
-
             <ModalLayout visible={departmentListVisible} setVisible={setDepartmentListVisible}>
                 <div className="head" style={{justifyContent: "flex-end"}}>
                     <div className="close" onClick={e => setDepartmentListVisible(false)}>
@@ -100,16 +96,16 @@ const DepartmentPage = () => {
                 <div className="navigate">
                     <ul className="navigate__list">
                         {department.map((el, index)=>
-                            <Link to={`${index+1}`} key={index} onClick={e => setDepartmentListVisible(false)}>
+                            <NavLink to={`${index+1}`} key={index} onClick={e => setDepartmentListVisible(false)}>
                                 <li className="navigate__list__item">
-                                    <img src={chel} className={'image'}/>
+                                    <img src={el.image} className={'image'}/>
                                     <div className="text">
                                         <div className="text__name">
                                             {el.name}
                                         </div>
                                     </div>
                                 </li>
-                            </Link>
+                            </NavLink>
                         )}
                     </ul>
                 </div>

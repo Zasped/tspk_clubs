@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './_honorDeskPage.scss';
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import Title from "../../components/UI/Title/Title";
-import {Link, Outlet, useParams} from "react-router-dom";
+import {Link, NavLink, Outlet, useParams} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBowlingBall, faXmark} from "@fortawesome/free-solid-svg-icons";
 import ModalLayout from "../../layout/ModalLayout/ModalLayout";
@@ -64,7 +64,7 @@ const HonorDeskPage = () => {
             <div className="flex honorDeskPage_flex">
                 <div className="column honorDeskPage_column">
                     <div className="title">
-                        <Title title={'Доска почета'}/>
+                        <Title title={'Доска почёта'}/>
                     </div>
                     <div className="honorDesk__list">
                         <div className="honorDesk__list__text" onClick={e => setHonorListVisible(true)}>
@@ -79,7 +79,7 @@ const HonorDeskPage = () => {
                     <div className="navigate">
                         <ul className="navigate__list">
                             {honor.map((el, index) =>
-                                <Link to={`${index + 1}`} key={index}>
+                                <NavLink to={`${index + 1}`} key={index}>
                                     <li className="navigate__list__item">
                                         <img src={chel} className={'image'}/>
                                         <div className="text">
@@ -91,7 +91,7 @@ const HonorDeskPage = () => {
                                             </div>
                                         </div>
                                     </li>
-                                </Link>
+                                </NavLink>
                             )}
                         </ul>
                     </div>
@@ -107,7 +107,7 @@ const HonorDeskPage = () => {
                 <div className="navigate">
                     <ul className="navigate__list">
                         {honor.map((el, index) =>
-                            <Link to={`${index + 1}`} key={index} onClick={e => setHonorListVisible(false)}>
+                            <NavLink to={`${index + 1}`} key={index} onClick={e => setHonorListVisible(false)}>
                                 <li className="navigate__list__item">
                                     <img src={chel} className={'image'}/>
                                     <div className="text">
@@ -119,7 +119,7 @@ const HonorDeskPage = () => {
                                         </div>
                                     </div>
                                 </li>
-                            </Link>
+                            </NavLink>
                         )}
                     </ul>
                 </div>

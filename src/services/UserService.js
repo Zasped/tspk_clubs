@@ -1,9 +1,9 @@
 import $api from "../http";
 
-export default class ClubService {
+export default class UserService {
 
-    static fetchClubs() {
-        return $api.get('/club')
+    static fetchUserId(id) {
+        return $api.get(`/user/${id}`)
     }
 
 }

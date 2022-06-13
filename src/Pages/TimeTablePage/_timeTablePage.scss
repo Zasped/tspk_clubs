@@ -3,7 +3,6 @@
 
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
 
   &__column {
 
@@ -22,9 +21,7 @@
         padding: 16px;
       }
 
-      .cldr {
-        padding: 0 16px;
-      }
+      .cldr {}
 
     }
 
@@ -88,7 +85,11 @@
         align-self: center;
       }
     }
-
   }
+}
 
+@media (max-width: 625px) {
+  .wrapper{
+    flex-direction: column;
+  }
 }

@@ -22,10 +22,10 @@ const HonorDeskId = () => {
                 <Subtitle classNames={['date__list']}>
                     <div className="study__year">
                         <h3 className="study__year__title">
-                            Год обучения
+                            Года обучения
                         </h3>
                         <p>
-                            2019 - 2023
+                            {data.years}
                         </p>
                     </div>
                     <div className="honor__date">

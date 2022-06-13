@@ -6,7 +6,9 @@ const Calendar = () => {
     const date = new Date();
     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
     const daysOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+
     let currentMonth = months[date.getMonth()];
+
     currentMonth = (date.getMonth() !== 7) ? currentMonth.slice(0, currentMonth.length - 1) + 'я' : currentMonth + 'а';
 
     const days = []
@@ -53,19 +55,9 @@ const Calendar = () => {
                 </div>
                 <div className="body-cldr__body">
                     <div className="day__list">
-                        {/*<div className="day__item">1</div>*/}
-                        {/*<div className="day__item">2</div>*/}
-                        {/*<div className="day__item">3</div>*/}
-                        {/*<div className="day__item">4</div>*/}
-                        {/*<div className="day__item">5</div>*/}
-                        {/*<div className="day__item">6</div>*/}
-                        {/*<div className="day__item">7</div>*/}
-                        {/*<div className="day__item">8</div>*/}
-
                         {days.map(el =>
                             el
                         )}
-
                     </div>
                 </div>
             </div>
